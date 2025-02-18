@@ -13,9 +13,7 @@ from datetime import timedelta
 from pathlib import Path
 import pymysql
 import os
-from dotenv import load_dotenv
-
-load_dotenv() 
+ 
 pymysql.install_as_MySQLdb()
 
 STORAGES = {
