@@ -126,12 +126,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 # 또는 특정 도메인만 허용할 경우 아래와 같이 설정 가능
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000/",
-    # "http://anotherdomain.com",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000/",
+#     # "http://anotherdomain.com",
+# ]
 
 ROOT_URLCONF = 'config.urls'
 
