@@ -113,7 +113,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'work',
     'storages',
-    'corsheaders'
+    'corsheaders',
+    # 'first_app'
 ]
 
 MIDDLEWARE = [
