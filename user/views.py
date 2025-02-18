@@ -59,7 +59,7 @@ def login(request):
     if user:
         # 비밀번호 검증
         if check_password(password, user.password):  # 비밀번호 비교
-            user.last_login = timezone.now()
+            # user.last_login = timezone.now()
             user.save()
             
             # JWT 토큰 발급
