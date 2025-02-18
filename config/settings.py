@@ -18,27 +18,27 @@ from dotenv import load_dotenv
 load_dotenv() 
 pymysql.install_as_MySQLdb()
 
-# STORAGES = {
-#     "default": {
-#         "BACKEND": "storages.backends.s3.S3Storage",
-#         "OPTIONS": {
-#             "access_key":   os.getenv('AWS_ACCESS_KEY_ID'),
-#             "secret_key":   os.getenv('AWS_SECRET_ACCESS_KEY'),
-#             "bucket_name": "kvisa-partners",
-#             "region_name": "ap-northeast-2",
-#             "default_acl": "public-read",
-#             "querystring_auth": False,
-#         },
-#     },
-#     "staticfiles": {
-#         "BACKEND": "storages.backends.s3.S3Storage",
-#         "OPTIONS": {
-#             "access_key": os.getenv('AWS_ACCESS_KEY_ID'),
-#             "secret_key": os.getenv('AWS_SECRET_ACCESS_KEY'),
-#             "bucket_name": "kvisa-partners",
-#         },
-#     },
-# }
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS": {
+            "access_key":   os.getenv('AWS_ACCESS_KEY_ID'),
+            "secret_key":   os.getenv('AWS_SECRET_ACCESS_KEY'),
+            "bucket_name": "kvisa-partners",
+            "region_name": "ap-northeast-2",
+            "default_acl": "public-read",
+            "querystring_auth": False,
+        },
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS": {
+            "access_key": os.getenv('AWS_ACCESS_KEY_ID'),
+            "secret_key": os.getenv('AWS_SECRET_ACCESS_KEY'),
+            "bucket_name": "kvisa-partners",
+        },
+    },
+}
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
