@@ -8,7 +8,7 @@ class IsStaff(BasePermission):
     운영진(staff)만 접근할 수 있는 권한 클래스
     """
     def has_permission(self, request, view):
-        return request.user.is_staff
+        return request.user.is_admin
 
 class IsMember(BasePermission):
     """

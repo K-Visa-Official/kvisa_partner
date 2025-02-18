@@ -17,8 +17,16 @@ Including another URLconf
 from django.contrib import admin 
 from django.urls import path , include
 
+from django.http import JsonResponse
+
+def home(request):
+    return JsonResponse({"error": "Forbidden Page"}, status=403)
+
 
 urlpatterns = [
+
+    path('', home),  # 루트 URL 추가
     path('admin/', admin.site.urls),
-    path('user/', include('user.urls')), 
+    path('api/', include('user.urls')), 
+    path('api/', include('work.urls')), 
 ]

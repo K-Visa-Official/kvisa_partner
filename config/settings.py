@@ -12,8 +12,50 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from datetime import timedelta 
 from pathlib import Path
 import pymysql
+import os
+from dotenv import load_dotenv
 
+load_dotenv() 
 pymysql.install_as_MySQLdb()
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS": {
+            "access_key":   os.getenv('AWS_ACCESS_KEY_ID'),
+            "secret_key":   os.getenv('AWS_SECRET_ACCESS_KEY'),
+            "bucket_name": "kvisa-partners",
+            "region_name": "ap-northeast-2",
+            "default_acl": "public-read",
+            "querystring_auth": False,
+        },
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS": {
+            "access_key": os.getenv('AWS_ACCESS_KEY_ID'),
+            "secret_key": os.getenv('AWS_SECRET_ACCESS_KEY'),
+            "bucket_name": "kvisa-partners",
+        },
+    },
+}
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+# # S3 버킷 이름
+# AWS_STORAGE_BUCKET_NAME = 'kvisa-partners'
+# # S3 접근 키 및 비밀 접근 키
+# # AWS_ACCESS_KEY_ID = 'your-access-key-id'
+# # AWS_SECRET_ACCESS_KEY = 'your-secret-access-key'
+# # S3 버킷이 위치한 지역
+# AWS_S3_REGION_NAME = 'ap-northeast-2'
+# # S3 파일의 URL 형식
+# AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+# # 미디어 파일 URL 설정
+# MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+# MEDIA_ROOT = 'media/'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +63,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kvisa_b2b',
-        'USER': 'root',
-        'PASSWORD': 'kim12011215',
-        'HOST': '127.0.0.1',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PW'),
+        'HOST': os.getenv('DB_HOST'),
         'PORT': '3306',
     }
 }
@@ -38,7 +80,7 @@ SECRET_KEY = 'django-insecure-s2q4apwm2m@8k2cfw5o-0yjqy@t^y#d+as-b*^=gkms*1tykkj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -71,6 +113,8 @@ INSTALLED_APPS = [
     'user',
     'rest_framework',
     'rest_framework_simplejwt',
+    'work',
+    'storages'
 ]
 
 MIDDLEWARE = [
