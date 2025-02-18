@@ -112,7 +112,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'work',
-    'storages'
+    'storages',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
+# CORS_ALLOW_ALL_ORIGINS = True
+# 또는 특정 도메인만 허용할 경우 아래와 같이 설정 가능
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://anotherdomain.com",
 ]
 
 ROOT_URLCONF = 'config.urls'
