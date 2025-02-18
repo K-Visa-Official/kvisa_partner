@@ -61,10 +61,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PW'),
-        'HOST': os.getenv('DB_HOST'),
+        'NAME': os.getenv('DB_NAME', 'kvisa_b2b'),
+        'USER': os.getenv('DB_USER', 'root'),
+        'PASSWORD': os.getenv('DB_PW', 'kim12011215'),
+        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
         'PORT': '3306',
     }
 }
@@ -129,7 +129,7 @@ MIDDLEWARE = [
 # CORS_ALLOW_ALL_ORIGINS = True
 # 또는 특정 도메인만 허용할 경우 아래와 같이 설정 가능
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000/",
+    "http://localhost:3000",
     # "http://anotherdomain.com",
 ]
 
@@ -151,7 +151,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'first_app.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
