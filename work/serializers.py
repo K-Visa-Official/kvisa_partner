@@ -1,8 +1,9 @@
 from rest_framework import serializers
 from .models import Work, Question, Answer, Process
-
+from user.serializers import UserSerializer
 
 class WorkSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
     class Meta:
         model = Work
         fields = "__all__"

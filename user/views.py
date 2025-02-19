@@ -20,6 +20,9 @@ from config.paging import CustomPagination
 from django.db.models import Q
 
 from django.utils import timezone
+
+from django.shortcuts import get_object_or_404
+
 ########################### 의뢰인 ###########################
 # 회원가입
 @api_view(['POST'])
@@ -59,8 +62,8 @@ def login(request):
     if user:
         # 비밀번호 검증
         if check_password(password, user.password):  # 비밀번호 비교
-            # user.last_login = timezone.now()
-            # user.save()
+            user.last_login = timezone.now()
+            user.save()
             
             # JWT 토큰 발급
             refresh = RefreshToken.for_user(user)
@@ -84,6 +87,15 @@ def get_user_info(request):
     data = serializer.data
     
     return Response(data, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+@permission_classes([IsStaff])
+def get_user_pk(request, pk):
+    user = get_object_or_404(User, id=pk)  # 사용자가 없으면 404 반환
+
+    serializer = UserSerializer(user)  # 단일 객체 직렬화
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 # 회원정보 변경
 @api_view(['PUT'])
@@ -148,7 +160,7 @@ def get_all_users(request):
     if create_at:
         filters &= Q(sign_in__date=create_at)  # 날짜 필터 수정
 
-    total_user = User.objects.filter(filters).order_by('-id')
+    total_user = User.objects.filter(filters , is_admin = 0).order_by('-id')
 
     result_page = paginator.paginate_queryset(total_user, request)
     serializer = UserSerializer(result_page, many=True)

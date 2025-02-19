@@ -5,6 +5,7 @@ from rest_framework import status
 from .serializers import WorkSerializer, QuestionSerializer, AnswerSerializer ,ProcessSerializer
 from .models import Work, Question, Answer , Process , ProcessUser
 from config.permissions import IsStaff
+from user.models import User
 
 from config.paging import CustomPagination
 
@@ -20,9 +21,16 @@ def postwork(request):
     
     # 'user' 필드를 요청 데이터에 추가
      # 'user' 필드를 현재 인증된 사용자 ID로 설정
-
+    user = User.objects.filter(id=request.data.get("user")).first()
     # Work 데이터 저장
     work_serializer = WorkSerializer(data=data)
+
+    if data.get("language") == 0 :
+        user.work_count += 1 
+        user.save()
+    else :
+        user.work_count_ch += 1 
+        user.save()
 
     if not work_serializer.is_valid():
         return Response(work_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -168,15 +176,23 @@ def delete_answer(request, answer_id):
 # 업체 등록한 업무리스트
 @api_view(['GET'])
 @permission_classes([AllowAny])
-def get_work_bu(request):
+def get_work_bu(request, pk):
+    # 쿼리 파라미터에서 'language' 값 받기
+    la = request.GET.get('language')
 
-    # 업체가 등록한 업무 필터링
-    work = Work.objects.filter(user_id = request.data.get("user"))
+    # 업체가 등록한 업무 필터링 (언어 필터링이 있을 경우)
+    if la:
+        work = Work.objects.filter(user_id=pk, language=la).order_by('-order')
+    else:
+        # 언어 필터링 없이 전체 데이터 반환
+        work = Work.objects.filter(user_id=pk).order_by('-order')
+
+    # 직렬화된 데이터 반환
     serializer = WorkSerializer(work, many=True)
 
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-# 업무 등록
+# 업무 진행
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def post_work(request):

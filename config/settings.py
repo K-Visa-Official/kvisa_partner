@@ -90,7 +90,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),  # 1시간 유지
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=5),  # 12시간 유지
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  # 7일 유지
 }
 
@@ -143,6 +143,7 @@ CORS_ALLOW_METHODS = (
     "POST",
     "PUT",
 )
+APPEND_SLASH = False
 
 CORS_ALLOW_HEADERS = (
     "accept",

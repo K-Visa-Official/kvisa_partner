@@ -11,4 +11,5 @@ urlpatterns = [
 
     #################### 어드민 ####################
     path('user/all', views.get_all_users, name='get_all_users'),
+    path('user/<int:pk>/', views.get_user_pk, name='get_user_pk'), 
 ]
