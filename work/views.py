@@ -6,6 +6,7 @@ from .serializers import WorkSerializer, QuestionSerializer, AnswerSerializer ,P
 from .models import Work, Question, Answer , Process , ProcessUser
 from config.permissions import IsStaff
 from user.models import User
+from user.serializers import UserSerializer
 
 from config.paging import CustomPagination
 
@@ -186,7 +187,13 @@ def get_work_bu(request, pk):
     else:
         # 언어 필터링 없이 전체 데이터 반환
         work = Work.objects.filter(user_id=pk).order_by('-order')
-
+    
+    if not work.exists():
+        user = User.objects.filter(id=pk)
+        # User에 대한 직렬화 진행 (적절한 UserSerializer 사용)
+        user_serializer = UserSerializer(user, many=True)
+        return Response(user_serializer.data, status=status.HTTP_200_OK)
+    
     # 직렬화된 데이터 반환
     serializer = WorkSerializer(work, many=True)
 
