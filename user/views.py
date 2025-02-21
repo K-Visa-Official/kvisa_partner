@@ -89,7 +89,7 @@ def get_user_info(request):
     return Response(data, status=status.HTTP_200_OK)
 
 @api_view(['GET'])
-@permission_classes([IsStaff])
+@permission_classes([AllowAny])
 def get_user_pk(request, pk):
     user = get_object_or_404(User, id=pk)  # 사용자가 없으면 404 반환
 

@@ -35,6 +35,11 @@ class User(AbstractBaseUser):
     bu_logo = models.FileField(upload_to=at_icon_path,  null=True, blank=True, verbose_name="아이콘 URL")
     bu_name = models.CharField('업체이름', max_length=50, null=True)
     bu_intro = models.CharField('업체소개', max_length=50, null=True)
+    
+    bu_name_ch = models.CharField('업체이름(중국어)', max_length=50, null=True)
+    bu_intro_ch = models.CharField('업체소개(중국어)', max_length=50, null=True)
+    
+
     bu_tel_first = models.CharField('담당자 연락처', max_length=20 , null=True) 
     bu_tel_name = models.CharField('담당자 이름', max_length=20 , null=True)
 

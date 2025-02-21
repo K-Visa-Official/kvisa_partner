@@ -17,7 +17,7 @@ class Work(models.Model):
     LA = [(0, "ko"), (1, "ch")]
 
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="works")
+    user = models.CharField(verbose_name="유저", max_length=200, null=True)
     language = models.IntegerField(choices=LA, null=False, verbose_name="언어")
     choice = models.CharField(verbose_name="업무선택", max_length=200, null=True)
     work_detail = models.TextField(verbose_name="세부정보")

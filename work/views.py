@@ -22,9 +22,20 @@ def postwork(request):
     
     # 'user' 필드를 요청 데이터에 추가
      # 'user' 필드를 현재 인증된 사용자 ID로 설정
-    user = User.objects.filter(id=request.data.get("user")).first()
+    user_id = data.get("user_id")
+    user = User.objects.filter(id=user_id).first()
+    if not user:
+        return Response({"error": "User not found"}, status=status.HTTP_400_BAD_REQUEST)
+    
+    data['user'] = user_id  # user를 직접 추가하여 serializer에 전달
+    data.pop("user_id", None) 
+    
     # Work 데이터 저장
     work_serializer = WorkSerializer(data=data)
+    if not work_serializer.is_valid():
+        return Response(work_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    work_instance = work_serializer.save()  # Work 객체 저장
 
     if data.get("language") == 0 :
         user.work_count += 1 
@@ -183,10 +194,10 @@ def get_work_bu(request, pk):
 
     # 업체가 등록한 업무 필터링 (언어 필터링이 있을 경우)
     if la:
-        work = Work.objects.filter(user_id=pk, language=la).order_by('-order')
+        work = Work.objects.filter(user=pk, language=la).order_by('-order')
     else:
         # 언어 필터링 없이 전체 데이터 반환
-        work = Work.objects.filter(user_id=pk).order_by('-order')
+        work = Work.objects.filter(user=pk).order_by('-order')
     
     if not work.exists():
         user = User.objects.filter(id=pk)
@@ -198,6 +209,22 @@ def get_work_bu(request, pk):
     serializer = WorkSerializer(work, many=True)
 
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+# 업체 등록한 업무리스트
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_work_qu_an(request, pk):
+
+    # 업체가 등록한 업무 필터링 (언어 필터링이 있을 경우)
+    questions = Question.objects.filter(work_id=pk).prefetch_related('answers')  # 🔹 Answer까지 한 번에 불러오기
+    
+    # 🔹 직렬화 (Question + 연결된 Answer 포함)
+    serializer = QuestionSerializer(questions, many=True)
+
+    return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
+
 
 # 업무 진행
 @api_view(['POST'])
