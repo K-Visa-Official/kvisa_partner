@@ -49,21 +49,21 @@ class Process(models.Model):
         (2, "completed"),
         (3, "cancelled"),
     ]
+    
 
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="processes")
+    user = models.CharField(verbose_name="유저", max_length=200, null=True)
     work = models.ForeignKey(Work, on_delete=models.CASCADE, related_name="processes")
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="processes")
-    answer = models.ForeignKey(Answer, on_delete=models.CASCADE, related_name="processes")
-    
+    question = models.CharField(verbose_name="질문", max_length=200, null=True)
+    answer = models.CharField(verbose_name="답변", max_length=200, null=True)
     created_at = models.DateTimeField('created_at', auto_now=True)
     state = models.IntegerField(choices=AR_STATE, default=1)
-    marketing = models.IntegerField(choices=AR_STATE, default=1)
+    marketing = models.CharField(verbose_name="마케팅 동의여부", max_length=3, null=True)
     
 
 class  ProcessUser(models.Model):
     
     id = models.AutoField(primary_key=True)
-    prcess = models.ForeignKey(Process, on_delete=models.CASCADE, related_name="processes")
+    process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name="processes")
     name = models.CharField(verbose_name="이름", max_length=20, null=True)
     tel = models.CharField(verbose_name="연락처", max_length=20, null=True)

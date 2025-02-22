@@ -210,7 +210,21 @@ def get_work_bu(request, pk):
 
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-# 업체 등록한 업무리스트
+# 업체 등록한 업무상세보기
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_work_detail(request, pk):
+    # 쿼리 파라미터에서 'language' 값 받기
+    work = Work.objects.filter(id=pk)
+      
+    # 업체가 등록한 업무 필터링 (언어 필터링이 있을 경우)  
+    # 직렬화된 데이터 반환
+    serializer = WorkSerializer(work, many=True)
+
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+# 질문 답변 리스트
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_work_qu_an(request, pk):
@@ -223,18 +237,17 @@ def get_work_qu_an(request, pk):
 
     return Response(serializer.data, status=status.HTTP_200_OK)
     
-
-
-
 # 업무 진행
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def post_work(request):
-    user = request.user  # 현재 로그인한 사용자
+    user = request.data.get("user")  # 현재 로그인한 사용자
     work_id = request.data.get("work")  # 업무 ID
     name = request.data.get("name")  # 사용자 이름
     tel = request.data.get("tel")  # 연락처
     marketing = request.data.get("marketing")  
+    question = request.data.get("questions")  # 연락처
+    answer = request.data.get("answers")  
 
     if not work_id:
         return Response({"detail": "Work ID is required"}, status=status.HTTP_400_BAD_REQUEST)
@@ -244,27 +257,28 @@ def post_work(request):
     except Work.DoesNotExist:
         return Response({"detail": "Work not found"}, status=status.HTTP_404_NOT_FOUND)
 
-    questions = Question.objects.filter(id=work)
-    answers = Answer.objects.filter(id=questions)
-
+   
     # Process 생성
     process = Process.objects.create(
         user=user,
         work=work,
-        questions = questions,
-        answers = answers,
+        question = question,
+        answer = answer,
         state=1,  # 진행 중 (in_progress)
         marketing = marketing
     )
 
     # ProcessUser 생성
-    ProcessUser.objects.create(
+    process_user = ProcessUser.objects.create(
         process=process,
         name=name,
         tel=tel
     )
 
-    return Response({"detail": "Process created successfully"}, status=status.HTTP_201_CREATED)
+    return Response({
+        "detail": "Process created successfully" ,
+        "return": process_user.process_id ,
+        }, status=status.HTTP_201_CREATED)
 
 # 진행중인 업무 확인
 @api_view(['GET'])
