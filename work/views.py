@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated , AllowAny
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import WorkSerializer, QuestionSerializer, AnswerSerializer ,ProcessSerializer
+from .serializers import WorkSerializer, QuestionSerializer, AnswerSerializer ,ProcessSerializer , ProcessUserSerializer
 from .models import Work, Question, Answer , Process , ProcessUser
 from config.permissions import IsStaff
 from user.models import User
@@ -277,7 +277,7 @@ def post_work(request):
 
     return Response({
         "detail": "Process created successfully" ,
-        "return": process_user.process_id ,
+        "return": process_user.id ,
         }, status=status.HTTP_201_CREATED)
 
 # 진행중인 업무 확인
@@ -307,6 +307,20 @@ def get_work(request,id):
     serializer = ProcessSerializer(result_page, many=True)
     
     return paginator.get_paginated_response(serializer.data)
+
+@api_view(['PATCH'])
+@permission_classes([AllowAny])
+def pro_name_change(request):
+    try:
+        progress_instance = ProcessUser.objects.get(id=request.data['id'])
+        progress_instance.name = request.data["name"]
+        progress_instance.tel = request.data["tel"]
+        progress_instance.save()
+        serializer = ProcessUserSerializer(progress_instance)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except ProcessUser.DoesNotExist:
+        return Response({"error": "ProcessUser not found"}, status=status.HTTP_404_NOT_FOUND)       
+
 
 # 진행상태 변경
 @api_view(['PATCH'])

@@ -18,6 +18,7 @@ urlpatterns = [
     path('client/works/<str:pk>', views.get_work_bu, name='get_work_list'),  # 업체가 등록한 업무 리스트
 
     path('client/work/detail/<str:pk>', views.get_work_detail, name='get_work_list'),  # 업체가 등록한 업무 리스트
+    path('client/progress/edit', views.pro_name_change, name='edit'),  # 업체가 등록한 업무 리스트
 
     path('client/works/detail/<str:pk>', views.get_work_qu_an, name='get_work_list'),  # 업체가 등록한 업무 리스트
     path('client/work/', views.post_work, name='post_work'),  # 업무 등록
