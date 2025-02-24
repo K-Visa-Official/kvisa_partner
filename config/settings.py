@@ -134,6 +134,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
     "http://localhost:3001",
+    "https://main.d1ixxx006maf83.amplifyapp.com",
 ]
 CORS_ALLOW_METHODS = (
     "DELETE",
