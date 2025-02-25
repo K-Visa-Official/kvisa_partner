@@ -223,7 +223,6 @@ def get_work_detail(request, pk):
 
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-
 # 질문 답변 리스트
 @api_view(['GET'])
 @permission_classes([AllowAny])
@@ -237,15 +236,16 @@ def get_work_qu_an(request, pk):
 
     return Response(serializer.data, status=status.HTTP_200_OK)
     
+    
 # 업무 진행
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def post_work(request):
     user = request.data.get("user")  # 현재 로그인한 사용자
     work_id = request.data.get("work")  # 업무 ID
-    name = request.data.get("name")  # 사용자 이름
-    tel = request.data.get("tel")  # 연락처
-    marketing = request.data.get("marketing")  
+    # name = request.data.get("name")  # 사용자 이름
+    # tel = request.data.get("tel")  # 연락처
+    # marketing = request.data.get("marketing")  
     question = request.data.get("questions")  # 연락처
     answer = request.data.get("answers")  
 
@@ -264,21 +264,80 @@ def post_work(request):
         work=work,
         question = question,
         answer = answer,
-        state=1,  # 진행 중 (in_progress)
-        marketing = marketing
     )
 
     # ProcessUser 생성
-    process_user = ProcessUser.objects.create(
-        process=process,
-        name=name,
-        tel=tel
-    )
+    # process_user = ProcessUser.objects.create(
+    #     process=process,
+    #     name=name,
+    #     tel=tel,
+    #     state=1,  # 진행 중 (in_progress)
+    #     marketing = marketing
+    # )
 
     return Response({
         "detail": "Process created successfully" ,
-        "return": process_user.id ,
+        "return": process.id ,
         }, status=status.HTTP_201_CREATED)
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def post_work_user(request):
+    user_id = request.data.get("id")  # 현재 로그인한 사용자
+    name = request.data.get("name")  # 사용자 이름
+    tel = request.data.get("tel")  # 연락처
+    marketing = request.data.get("marketing")  # 마케팅 동의 여부
+    lang = request.data.get("lang")  # 마케팅 동의 여부
+
+    try:
+        # process_id에 해당하는 Process 객체 가져오기
+        process = Process.objects.get(id=user_id)  # process_id는 user_id를 통해 가져오는 방식으로 변경
+    except Process.DoesNotExist:
+        return Response({"detail": "Process not found"}, status=status.HTTP_404_NOT_FOUND)
+
+    # ProcessUser 생성
+    process_user = ProcessUser.objects.create(
+        process=process,  # 유효한 Process 객체를 연결
+        name=name,
+        tel=tel,
+        state=0,  # 진행 중 (in_progress)
+        marketing=marketing,
+        lang = lang
+    )
+
+    return Response({
+        "detail": "ProcessUser created successfully",
+        "return": process_user.id,
+    }, status=status.HTTP_201_CREATED)
+
+@api_view(['PATCH'])
+@permission_classes([AllowAny])
+def pro_name_change(request):
+    try:
+        progress_instance = ProcessUser.objects.get(id=request.data['id'])
+        progress_instance.name = request.data["name"]
+        progress_instance.tel = request.data["tel"]
+        progress_instance.save()
+        serializer = ProcessUserSerializer(progress_instance)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except ProcessUser.DoesNotExist:
+        return Response({"error": "ProcessUser not found"}, status=status.HTTP_404_NOT_FOUND)       
+
+
+# 진행중인 업무 조회
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_work_check(request):
+
+    tel = request.GET.get("tel")
+
+    process = ProcessUser.objects.filter(tel = tel).order_by("-id")
+
+    serializer = ProcessUserSerializer(process, many=True)
+    
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
 
 # 진행중인 업무 확인
 @api_view(['GET'])
@@ -308,18 +367,7 @@ def get_work(request,id):
     
     return paginator.get_paginated_response(serializer.data)
 
-@api_view(['PATCH'])
-@permission_classes([AllowAny])
-def pro_name_change(request):
-    try:
-        progress_instance = ProcessUser.objects.get(id=request.data['id'])
-        progress_instance.name = request.data["name"]
-        progress_instance.tel = request.data["tel"]
-        progress_instance.save()
-        serializer = ProcessUserSerializer(progress_instance)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-    except ProcessUser.DoesNotExist:
-        return Response({"error": "ProcessUser not found"}, status=status.HTTP_404_NOT_FOUND)       
+
 
 
 # 진행상태 변경

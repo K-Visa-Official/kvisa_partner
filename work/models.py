@@ -43,27 +43,37 @@ class Answer(models.Model):
 
 
 class Process(models.Model):
-    AR_STATE = [
-        (0, "deleted"),
-        (1, "in_progress"),
-        (2, "completed"),
-        (3, "cancelled"),
-    ]
     
-
     id = models.AutoField(primary_key=True)
     user = models.CharField(verbose_name="유저", max_length=200, null=True)
     work = models.ForeignKey(Work, on_delete=models.CASCADE, related_name="processes")
     question = models.CharField(verbose_name="질문", max_length=200, null=True)
     answer = models.CharField(verbose_name="답변", max_length=200, null=True)
     created_at = models.DateTimeField('created_at', auto_now=True)
-    state = models.IntegerField(choices=AR_STATE, default=1)
-    marketing = models.CharField(verbose_name="마케팅 동의여부", max_length=3, null=True)
     
 
 class  ProcessUser(models.Model):
+    AR_STATE = [
+        (0, "접수완료"),
+        (1, "계약완료"),
+        (2, "서류작성"),
+        (3, "심사진행"),
+        (4, "처리완료"),
+        (5, "상담종료"),
+    ]
     
+    La = [
+        (0, "한국어"),
+        (1, "중국어"),
+        ]
+
     id = models.AutoField(primary_key=True)
     process = models.ForeignKey(Process, on_delete=models.CASCADE, related_name="processes")
     name = models.CharField(verbose_name="이름", max_length=20, null=True)
     tel = models.CharField(verbose_name="연락처", max_length=20, null=True)
+    lang = models.IntegerField(choices=La, default=0)
+    state = models.IntegerField(choices=AR_STATE, default=0)
+    marketing = models.CharField(verbose_name="마케팅 동의여부", max_length=3, null=True)
+    created_at = models.DateTimeField('created_at', auto_now=True)
+    
+    

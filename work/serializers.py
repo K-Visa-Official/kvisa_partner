@@ -34,11 +34,18 @@ class ProcessSerializer(serializers.ModelSerializer):
 
 class ProcessUserSerializer(serializers.ModelSerializer):
     work = serializers.SerializerMethodField()
+    process = serializers.SerializerMethodField()
 
     class Meta:
         model = ProcessUser
-        fields = ['id', 'name', 'tel', 'work']
+        fields = ['id', 'name', 'tel', 'work', 'process' , 'state' , 'created_at']
 
     def get_work(self, obj):
-        # ProcessUser에서 연결된 Process를 통해 Work를 가져오기
-        return WorkSerializer(obj.process.work).data
+        # ✅ obj.process를 통해 work에 접근
+        if obj.process and obj.process.work:
+            return WorkSerializer(obj.process.work).data
+        return None  # work가 없을 경우 None 반환
+    
+    def get_process(self, obj):
+        # ✅ obj.process를 직렬화해야 함
+        return ProcessSerializer(obj.process).data if obj.process else None

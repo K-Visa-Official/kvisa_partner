@@ -21,7 +21,11 @@ urlpatterns = [
     path('client/progress/edit', views.pro_name_change, name='edit'),  # 업체가 등록한 업무 리스트
 
     path('client/works/detail/<str:pk>', views.get_work_qu_an, name='get_work_list'),  # 업체가 등록한 업무 리스트
+    path('client/crm', views.get_work_check, name='get_work_list'),  # 업체가 등록한 업무 리스트
+
     path('client/work/', views.post_work, name='post_work'),  # 업무 등록
+    path('client/work/user', views.post_work_user, name='post_work'),  # 업무 등록
+
     path('client/works/in_progress/', views.get_work, name='get_in_progress_work'),  # 진행중인 업무 확인
     path('client/work/state/<int:id>/', views.change_state, name='change_work_state'),  # 진행상태 변경
 ]
