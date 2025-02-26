@@ -5,11 +5,17 @@ from .models import ProcessUser
 
 
 class WorkSerializer(serializers.ModelSerializer):
+    question = serializers.SerializerMethodField()
+    
     # user = UserSerializer()
     class Meta:
         model = Work
         fields = "__all__"
 
+    def get_question(self, obj):
+        # obj.question이 Work 모델에서 연관된 Question 객체일 경우 직렬화
+        return QuestionSerializer(obj.questions.all(), many=True).data
+    
 class AnswerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Answer

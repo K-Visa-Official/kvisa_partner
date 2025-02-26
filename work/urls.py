@@ -6,6 +6,11 @@ urlpatterns = [
     path('admin/work/', views.postwork, name='post_work'),  # 질문 등록
 
     path('admin/work/change', views.change_image, name='post_work'),  # 이미지 등록
+
+    path('admin/work/change/no', views.change_image_work_change, name='post_work'),  # 이미지 등록
+
+    path('admin/work/order', views.order_change, name='order_change'),  # 업무 순서변경
+    
     path('admin/work/<int:work_id>/', views.get_work, name='get_work'),  # 질문조회
     path('admin/work/update/<int:work_id>/', views.update_work, name='update_work'),  # 업무 이름 및 정보 수정
     path('admin/question/update/<int:question_id>/', views.update_question, name='update_question'),  # 질문 수정

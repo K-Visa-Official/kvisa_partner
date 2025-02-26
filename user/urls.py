@@ -6,7 +6,7 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('login/', views.login, name='login'),
     path('user/', views.get_user_info, name='get_user_info'), 
-    path('user/edit', views.get_user_edit, name='get_user_edit'),
+    path('user/edit/<int:pk>', views.get_user_edit, name='get_user_edit'),
 
 
     #################### 어드민 ####################

@@ -11,6 +11,8 @@ from user.serializers import UserSerializer
 from config.paging import CustomPagination
 
 from django.db.models import Q
+from django.http import JsonResponse
+import json
 
 ########################### 어드민 ###########################
 # 질문 등록
@@ -70,7 +72,7 @@ def postwork(request):
 
         for answer_data in answers_data:
             answer_text = answer_data.get("answer")
-            answer_count = answer_data.get("sort")
+            answer_count = answer_data.get("answer_count")
 
             if not answer_text:
                 continue  # 답변 텍스트가 없으면 건너뛰기
@@ -95,6 +97,98 @@ def change_image(request):
     serializer = WorkSerializer(work_instance)
     return Response(serializer.data, status=status.HTTP_200_OK)                    
 
+@api_view(['PATCH'])
+@permission_classes([IsStaff])
+def change_image_work_change(request):
+    try:
+        # 기존 작업 데이터 가져오기
+        work_before = Work.objects.get(id=request.data['before_id'])
+        
+        # 새로운 작업 데이터 가져오기
+        work_new = Work.objects.get(id=request.data['new_id'])
+
+        # 새로운 작업 객체 수정
+        if 'detail_url' in request.data and request.data['detail_url']:
+            work_new.detail = request.data["detail_url"]
+        else :
+            work_new.detail = work_before.detail
+
+        if 'detail_second' in request.data and request.data['detail_second']:
+            work_new.detail_second = request.data["detail_second"]
+        else :
+            work_new.detail_second = work_before.detail_second
+
+        if work_new.language == 0 :
+            user = User.objects.get(id=work_new.user)
+            user.work_count  -= 1 
+            user.save()
+        elif work_new.language == 1 :
+            user = User.objects.get(id=work_new.user)
+            user.work_count_ch  -= 1 
+            user.save()
+            
+        work_new.save()
+
+        # 기존 작업 삭제 (필요한 경우)
+        work_before.delete()
+
+        # 변경된 작업 객체 반환
+        serializer = WorkSerializer(work_new)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    except Work.DoesNotExist:
+        return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
+    
+
+# 업무 순서 변경
+@api_view(['PATCH'])
+@permission_classes([IsStaff])
+def order_change(request):
+    try:
+        user_id = request.data.get("pk")
+        work_id = request.data.get("work_id")
+        direction = request.data.get("direction")
+
+        work = Work.objects.get(id=work_id, user=user_id)
+            
+        if direction == "up":
+            # 현재 order보다 작은 값 중 가장 큰 값을 가진 work 찾기
+            prev_work = Work.objects.filter(user=user_id, order__lt=work.order).order_by("-order").first()
+            if prev_work:
+                work.order, prev_work.order = prev_work.order, work.order
+                work.save()
+                prev_work.save()
+
+            return JsonResponse({"status": "success", "message": "Order updated"})
+        
+        elif direction == "down":
+            # 현재 order보다 큰 값 중 가장 작은 값을 가진 work 찾기
+            next_work = Work.objects.filter(user=user_id, order__gt=work.order).order_by("order").first()
+            if next_work:
+                work.order, next_work.order = next_work.order, work.order
+                work.save()
+                next_work.save()
+
+            return JsonResponse({"status": "success", "message": "Order updated"})
+        
+    except Work.DoesNotExist:
+            return JsonResponse({"status": "error", "message": "Work not found"}, status=404)
+
+    return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)
+
+# 업무 삭제
+@api_view(['DELETE'])
+@permission_classes([IsStaff])
+def delete_work(request, work_id):
+    try:
+        work = Work.objects.get(id=work_id)
+        work.delete()
+        return Response({'detail': 'Work deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
+    except Work.DoesNotExist:
+        return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
+
+
+
 # 질문조회
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
@@ -105,6 +199,7 @@ def get_work(request, work_id):
         return Response(serializer.data, status=status.HTTP_200_OK)
     except Work.DoesNotExist:
         return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
+
 
 # 업무 이름 및 정보 수정
 @api_view(['PUT'])
@@ -151,16 +246,6 @@ def update_answer(request, answer_id):
     except Answer.DoesNotExist:
         return Response({'detail': 'Answer not found'}, status=status.HTTP_404_NOT_FOUND)
 
-# 업무 삭제
-@api_view(['DELETE'])
-@permission_classes([IsStaff])
-def delete_work(request, work_id):
-    try:
-        work = Work.objects.get(id=work_id)
-        work.delete()
-        return Response({'detail': 'Work deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
-    except Work.DoesNotExist:
-        return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
 
 # 질문 삭제
 @api_view(['DELETE'])
@@ -194,10 +279,10 @@ def get_work_bu(request, pk):
 
     # 업체가 등록한 업무 필터링 (언어 필터링이 있을 경우)
     if la:
-        work = Work.objects.filter(user=pk, language=la).order_by('-order')
+        work = Work.objects.filter(user=pk, language=la).order_by('order')
     else:
         # 언어 필터링 없이 전체 데이터 반환
-        work = Work.objects.filter(user=pk).order_by('-order')
+        work = Work.objects.filter(user=pk).order_by('order')
     
     if not work.exists():
         user = User.objects.filter(id=pk)
@@ -235,8 +320,7 @@ def get_work_qu_an(request, pk):
     serializer = QuestionSerializer(questions, many=True)
 
     return Response(serializer.data, status=status.HTTP_200_OK)
-    
-    
+     
 # 업무 진행
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -324,6 +408,7 @@ def pro_name_change(request):
         return Response({"error": "ProcessUser not found"}, status=status.HTTP_404_NOT_FOUND)       
 
 
+
 # 진행중인 업무 조회
 @api_view(['GET'])
 @permission_classes([AllowAny])
@@ -366,8 +451,6 @@ def get_work(request,id):
     serializer = ProcessSerializer(result_page, many=True)
     
     return paginator.get_paginated_response(serializer.data)
-
-
 
 
 # 진행상태 변경

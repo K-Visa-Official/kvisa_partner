@@ -22,6 +22,7 @@ from django.db.models import Q
 from django.utils import timezone
 
 from django.shortcuts import get_object_or_404
+from django.core.exceptions import ObjectDoesNotExist
 
 ########################### 의뢰인 ###########################
 # 회원가입
@@ -100,46 +101,49 @@ def get_user_pk(request, pk):
 # 회원정보 변경
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
-def get_user_edit(request):
-    user = self.request.user
-    bu_logo = request.data.get("bu_logo")
-    bu_name = request.data.get("bu_name")
-    bu_intro = request.data.get("bu_intro")
-    bu_tel_first = request.data.get("bu_tel_first")
-    bu_tel_name = request.data.get("bu_tel_name")
+def get_user_edit(request, pk):
+    try:
+        user = User.objects.get(id=pk)  # 단일 객체 가져오기
+    except ObjectDoesNotExist:
+        return Response({"error": "해당 유저를 찾을 수 없습니다."}, status=status.HTTP_404_NOT_FOUND)
 
-    bu_bank_name = request.data.get("bu_bank_name")
-    bu_bank_number = request.data.get("bu_bank_number")
+    data = request.data
 
-    if bu_logo is not None and bu_logo != "":
-        user.bu_logo = bu_logo
+    # 필드 업데이트 (None이 아니고 빈 문자열이 아닐 경우)
+    if data.get("bu_logo"):
+        user.bu_logo = data["bu_logo"]
+    
+    if data.get("bu_name"):
+        user.bu_name = data["bu_name"]
 
-    if bu_name is not None and bu_name != "":
-        user.bu_name
+    if data.get("bu_name_ch"):
+        user.bu_name_ch = data["bu_name_ch"]
 
-    if bu_intro is not None and bu_intro != "":
-        user.bu_intro = bu_intro
+    if data.get("bu_intro"):
+        user.bu_intro = data["bu_intro"]
 
-    if bu_tel_first is not None and bu_tel_first != "":
-        user.bu_tel_first = bu_tel_first
+    if data.get("bu_intro_ch"):
+        user.bu_intro_ch = data["bu_intro_ch"]
 
-    if bu_tel_name is not None and bu_tel_name != "":
-        user.bu_tel_name = bu_tel_name
+    if data.get("bu_tel_first"):
+        user.bu_tel_first = data["bu_tel_first"]
+    
+    if data.get("bu_tel_name"):
+        user.bu_tel_name = data["bu_tel_name"]
+    
+    if data.get("bu_bank_name"):
+        user.bu_bank_name = data["bu_bank_name"]
+    
+    if data.get("bu_bank_number"):
+        user.bu_bank_number = data["bu_bank_number"]
 
-
-    if bu_bank_name is not None and bu_bank_name != "":
-        user.bu_bank_name = bu_bank_name
-
-    if bu_bank_number is not None and bu_bank_number != "":
-        user.bu_bank_number = bu_bank_number
-
+    # 변경 사항 저장
     user.save()
     
+    # 수정된 유저 정보 반환
     serializer = UserSerializer(user)
-
-    data = serializer.data
-
-    return Response(data, status=status.HTTP_200_OK)
+    # return Response(serializer.data, status=status.HTTP_200_OK)
+    return Response({"message": "수정 성공!", "user": serializer.data}, status=status.HTTP_201_CREATED)
 
 # 회원삭제
 
