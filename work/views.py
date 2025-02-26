@@ -126,10 +126,11 @@ def change_image_work_change(request):
             user = User.objects.get(id=work_new.user)
             user.work_count_ch  -= 1 
             user.save()
-            
+
         work_new.save()
 
-        # 기존 작업 삭제 (필요한 경우)
+
+        # 기존 작업 삭제 (필요한 경우(())
         work_before.delete()
 
         # 변경된 작업 객체 반환
