@@ -140,7 +140,6 @@ def change_image_work_change(request):
     except Work.DoesNotExist:
         return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
     
-
 # 업무 순서 변경
 @api_view(['PATCH'])
 @permission_classes([IsStaff])
@@ -188,8 +187,6 @@ def delete_work(request, work_id):
     except Work.DoesNotExist:
         return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
 
-
-
 # 질문조회
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
@@ -201,74 +198,32 @@ def get_work(request, work_id):
     except Work.DoesNotExist:
         return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
 
-
-# 업무 이름 및 정보 수정
-@api_view(['PUT'])
+# 접수된 업무 현황
+@api_view(['GET'])
 @permission_classes([IsStaff])
-def update_work(request, work_id):
-    try:
-        work = Work.objects.get(id=work_id)
-        work_serializer = WorkSerializer(work, data=request.data)
+def visa_intro(request) :
+    paginator = CustomPagination()
 
-        if work_serializer.is_valid():
-            work_serializer.save()
-            return Response(work_serializer.data, status=status.HTTP_200_OK)
-        return Response(work_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    except Work.DoesNotExist:
-        return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
+    filters = Q()
     
-# 질문수정    
-@api_view(['PUT'])
-@permission_classes([IsStaff])
-def update_question(request, question_id):
-    try:
-        question = Question.objects.get(id=question_id)
-        question_serializer = QuestionSerializer(question, data=request.data)
+    # 비즈니스 필터 추가
+    business = request.GET.get("business")
+    if business:
+        filters &= Q(business=business)
 
-        if question_serializer.is_valid():
-            question_serializer.save()
-            return Response(question_serializer.data, status=status.HTTP_200_OK)
-        return Response(question_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    except Question.DoesNotExist:
-        return Response({'detail': 'Question not found'}, status=status.HTTP_404_NOT_FOUND)
-    
-# 답변수정    
-@api_view(['PUT'])
-@permission_classes([IsStaff])
-def update_answer(request, answer_id):
-    try:
-        answer = Answer.objects.get(id=answer_id)
-        answer_serializer = AnswerSerializer(answer, data=request.data)
-
-        if answer_serializer.is_valid():
-            answer_serializer.save()
-            return Response(answer_serializer.data, status=status.HTTP_200_OK)
-        return Response(answer_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    except Answer.DoesNotExist:
-        return Response({'detail': 'Answer not found'}, status=status.HTTP_404_NOT_FOUND)
+    # 생성 날짜 필터 추가
+    create_at = request.GET.get("created_at")
+    if create_at:
+        filters &= Q(created_at=create_at)
 
 
-# 질문 삭제
-@api_view(['DELETE'])
-@permission_classes([IsStaff])
-def delete_question(request, question_id):
-    try:
-        question = Question.objects.get(id=question_id)
-        question.delete()
-        return Response({'detail': 'Question deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
-    except Question.DoesNotExist:
-        return Response({'detail': 'Question not found'}, status=status.HTTP_404_NOT_FOUND)
+    # 데이터 필터링 및 페이징 처리
+    queryset = ProcessUser.objects.filter(filters).order_by('-created_at')
+    result_page = paginator.paginate_queryset(queryset, request)
+    serializer = ProcessUserSerializer(result_page, many=True)
 
-# 답변 삭제
-@api_view(['DELETE'])
-@permission_classes([IsStaff])
-def delete_answer(request, answer_id):
-    try:
-        answer = Answer.objects.get(id=answer_id)
-        answer.delete()
-        return Response({'detail': 'Answer deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
-    except Answer.DoesNotExist:
-        return Response({'detail': 'Answer not found'}, status=status.HTTP_404_NOT_FOUND)
+    return paginator.get_paginated_response(serializer.data)
+
 
 ########################### 의뢰인 ###########################
 # 업체 등록한 업무리스트
@@ -417,7 +372,12 @@ def get_work_check(request):
 
     tel = request.GET.get("tel")
 
-    process = ProcessUser.objects.filter(tel = tel).order_by("-id")
+    name = request.GET.get("name")
+    if tel :
+        process = ProcessUser.objects.filter(tel = tel).order_by("-id")
+    else :
+        process = ProcessUser.objects.filter(name = name).order_by("-id")
+        
 
     serializer = ProcessUserSerializer(process, many=True)
     

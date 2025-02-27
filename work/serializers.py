@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Work, Question, Answer, Process
 from user.serializers import UserSerializer
 from .models import ProcessUser
+from user.models import User
 
 
 class WorkSerializer(serializers.ModelSerializer):
@@ -41,11 +42,22 @@ class ProcessSerializer(serializers.ModelSerializer):
 class ProcessUserSerializer(serializers.ModelSerializer):
     work = serializers.SerializerMethodField()
     process = serializers.SerializerMethodField()
+    user = serializers.SerializerMethodField()
 
     class Meta:
         model = ProcessUser
-        fields = ['id', 'name', 'tel', 'work', 'process' , 'state' , 'created_at']
+        fields = "__all__"
 
+    def get_user(self, obj):
+        """Process를 통해 user 정보 가져오기"""
+        if obj.process and obj.process.user:
+            try:
+                user = User.objects.get(id=obj.process.user)  # ✅ 문자열 ID를 User 객체로 변환
+                return UserSerializer(user).data
+            except User.DoesNotExist:
+                return None
+        return None
+    
     def get_work(self, obj):
         # ✅ obj.process를 통해 work에 접근
         if obj.process and obj.process.work:
