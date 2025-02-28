@@ -375,9 +375,15 @@ def get_work_check(request):
     name = request.GET.get("name")
     if tel :
         process = ProcessUser.objects.filter(tel = tel).order_by("-id")
+    elif "^" in name:
+        name_parts = name.split("^")  # "kimeender&&"에서 ["kimeender", ""]로 나눠짐
+    
+        # "kimeender"만 포함하는 경우
+        process = ProcessUser.objects.filter(
+            Q(name__contains=name_parts[0])  # 첫 번째 부분만 포함하는 필터링
+        ).order_by("-id")
     else :
-        process = ProcessUser.objects.filter(name = name).order_by("-id")
-        
+        process = ProcessUser.objects.filter(name=name).order_by("-id")
 
     serializer = ProcessUserSerializer(process, many=True)
     
