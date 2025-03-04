@@ -15,6 +15,9 @@ urlpatterns = [
 
     path('admin/visa/', views.visa_intro, name='get_work'),  # 접수된 업무 리스트
     
+
+    path('admin/answer/', views.get_answer, name='get_work'),  # ㄴ답변 보기
+
     ########################### 의뢰인 ###########################
     path('client/works/<str:pk>', views.get_work_bu, name='get_work_list'),  # 업체가 등록한 업무 리스트
 

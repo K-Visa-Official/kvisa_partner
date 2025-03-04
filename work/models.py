@@ -50,6 +50,7 @@ class Process(models.Model):
     question = models.CharField(verbose_name="질문", max_length=200, null=True)
     answer = models.CharField(verbose_name="답변", max_length=200, null=True)
     created_at = models.DateTimeField('created_at', auto_now=True)
+    match = models.CharField(verbose_name="업무진행유저", max_length=200, null=True)
     
 
 class  ProcessUser(models.Model):
@@ -75,5 +76,5 @@ class  ProcessUser(models.Model):
     state = models.IntegerField(choices=AR_STATE, default=0)
     marketing = models.CharField(verbose_name="마케팅 동의여부", max_length=3, null=True)
     created_at = models.DateTimeField('created_at', auto_now=True)
-    
+    match = models.CharField(verbose_name="업무진행유저", max_length=200, null=True)
     

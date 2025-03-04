@@ -9,7 +9,7 @@ from user.models import User
 from user.serializers import UserSerializer
 
 from config.paging import CustomPagination
-
+from datetime import datetime
 from django.db.models import Q
 from django.http import JsonResponse
 import json
@@ -209,12 +209,26 @@ def visa_intro(request) :
     # 비즈니스 필터 추가
     business = request.GET.get("business")
     if business:
-        filters &= Q(business=business)
+        filters &= Q(name=business)
+    
+    state = request.GET.get("state")
+    if state:
+        filters &= Q(state=state)
 
+    choice = request.GET.get("choice")
+    if choice:
+        filters &= Q(process__work__choice=choice)
+        
     # 생성 날짜 필터 추가
     create_at = request.GET.get("created_at")
     if create_at:
-        filters &= Q(created_at=create_at)
+        try:
+            # '2025.02.28' 형식을 'YYYY-MM-DD'로 변환
+            create_at_date = datetime.strptime(create_at, "%Y.%m.%d").date()
+            # 날짜만 비교
+            filters &= Q(created_at__date=create_at_date)
+        except ValueError:
+            pass
 
 
     # 데이터 필터링 및 페이징 처리
@@ -288,7 +302,8 @@ def post_work(request):
     # marketing = request.data.get("marketing")  
     question = request.data.get("questions")  # 연락처
     answer = request.data.get("answers")  
-
+    match = request.data.get("match")  
+    
     if not work_id:
         return Response({"detail": "Work ID is required"}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -304,6 +319,7 @@ def post_work(request):
         work=work,
         question = question,
         answer = answer,
+        match = match
     )
 
     # ProcessUser 생성
@@ -328,7 +344,8 @@ def post_work_user(request):
     tel = request.data.get("tel")  # 연락처
     marketing = request.data.get("marketing")  # 마케팅 동의 여부
     lang = request.data.get("lang")  # 마케팅 동의 여부
-
+    match = request.data.get("match")  # 마케팅 동의 여부
+    
     try:
         # process_id에 해당하는 Process 객체 가져오기
         process = Process.objects.get(id=user_id)  # process_id는 user_id를 통해 가져오는 방식으로 변경
@@ -342,7 +359,8 @@ def post_work_user(request):
         tel=tel,
         state=0,  # 진행 중 (in_progress)
         marketing=marketing,
-        lang = lang
+        lang = lang ,
+        match = match
     )
 
     return Response({
@@ -353,6 +371,8 @@ def post_work_user(request):
 @api_view(['PATCH'])
 @permission_classes([AllowAny])
 def pro_name_change(request):
+    print(request.data)
+    print("asdkasjdhasjh")
     try:
         progress_instance = ProcessUser.objects.get(id=request.data['id'])
         progress_instance.name = request.data["name"]
@@ -362,8 +382,6 @@ def pro_name_change(request):
         return Response(serializer.data, status=status.HTTP_200_OK)
     except ProcessUser.DoesNotExist:
         return Response({"error": "ProcessUser not found"}, status=status.HTTP_404_NOT_FOUND)       
-
-
 
 # 진행중인 업무 조회
 @api_view(['GET'])
@@ -388,8 +406,6 @@ def get_work_check(request):
     serializer = ProcessUserSerializer(process, many=True)
     
     return Response(serializer.data, status=status.HTTP_200_OK)
-
-
 
 # 진행중인 업무 확인
 @api_view(['GET'])
@@ -436,3 +452,18 @@ def change_state(request,id) :
     data = serializer.data
 
     return Response(data, status=status.HTTP_200_OK)
+
+# 답변 확인하기
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_answer(request):
+
+    pk = request.GET.get("id")
+
+    pro_user = ProcessUser.objects.get(id=pk)
+
+    process = Process.objects.filter(match=pro_user.match)
+
+    serializer = ProcessSerializer(process, many=True)
+    
+    return Response(serializer.data, status=status.HTTP_200_OK)
