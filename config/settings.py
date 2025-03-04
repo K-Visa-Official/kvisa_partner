@@ -64,7 +64,7 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME', 'kvisa_b2b'),
         'USER': os.getenv('DB_USER', 'root'),
         'PASSWORD': os.getenv('DB_PW', 'kim12011215'),
-        'HOST': os.getenv('DB_HOST', 'k-visa-partner.cliq0kecaxpp.ap-northeast-2.rds.amazonaws.com'),
+        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
         'PORT': '3306',
     }
 }

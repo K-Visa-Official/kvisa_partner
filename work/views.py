@@ -427,12 +427,12 @@ def change_state(request,id) :
     state = request.data.get("state")
     pk  = request.data.get("id")
 
-    process = Process.objects.filter(id = pk)
+    process = ProcessUser.objects.get(id = pk)
 
     process.state = state
     process.save()
 
-    serializer = ProcessSerializer(process, many=False)
+    serializer = ProcessUserSerializer(process, many=False)
     data = serializer.data
 
     return Response(data, status=status.HTTP_200_OK)
