@@ -3,7 +3,9 @@ from .models import Work, Question, Answer, Process
 from user.serializers import UserSerializer
 from .models import ProcessUser
 from user.models import User
+# from django.contrib.auth import get_user_model
 
+# User = get_user_model()
 
 class WorkSerializer(serializers.ModelSerializer):
     question = serializers.SerializerMethodField()
@@ -48,6 +50,7 @@ class ProcessUserSerializer(serializers.ModelSerializer):
         model = ProcessUser
         fields = "__all__"
 
+    
     def get_user(self, obj):
         """Process를 통해 user 정보 가져오기"""
         if obj.process and obj.process.user:

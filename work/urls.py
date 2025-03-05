@@ -30,6 +30,8 @@ urlpatterns = [
     path('client/work/', views.post_work, name='post_work'),  # 업무 등록
     path('client/work/user', views.post_work_user, name='post_work'),  # 업무 등록
 
-    path('client/works/in_progress/', views.get_work, name='get_in_progress_work'),  # 진행중인 업무 확인
+    path('client/works/in_progress/', views.get_work_us, name='get_in_progress_work'),  # 진행중인 업무 확인
     path('client/work/state/<int:id>/', views.change_state, name='change_work_state'),  # 진행상태 변경
+
+    path('client/worklist/', views.me_work, name='worklist'),  # 의뢰인 업무리스트
 ]

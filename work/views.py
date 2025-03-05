@@ -198,7 +198,7 @@ def get_work(request, work_id):
     except Work.DoesNotExist:
         return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
 
-# 접수된 업무 현황
+# 접수된 업무 현황 순서대로
 @api_view(['GET'])
 @permission_classes([IsStaff])
 def visa_intro(request) :
@@ -237,7 +237,6 @@ def visa_intro(request) :
     serializer = ProcessUserSerializer(result_page, many=True)
 
     return paginator.get_paginated_response(serializer.data)
-
 
 ########################### 의뢰인 ###########################
 # 업체 등록한 업무리스트
@@ -410,7 +409,7 @@ def get_work_check(request):
 # 진행중인 업무 확인
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def get_work(request,id):
+def get_work_us(request,id):
 
     state = request.data.get("state")
     name = request.data.get("name")
@@ -434,7 +433,6 @@ def get_work(request,id):
     serializer = ProcessSerializer(result_page, many=True)
     
     return paginator.get_paginated_response(serializer.data)
-
 
 # 진행상태 변경
 @api_view(['PATCH'])
@@ -467,3 +465,15 @@ def get_answer(request):
     serializer = ProcessSerializer(process, many=True)
     
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+# 진행상태 변경
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def me_work(request):
+    """로그인한 사용자의 ProcessUser 데이터만 필터링"""
+    process_users = ProcessUser.objects.select_related("process").filter(process__user=request.user.id)  # ✅ 필터링 추가
+    paginator = CustomPagination()
+    result_page = paginator.paginate_queryset(process_users, request)
+    serializer = ProcessUserSerializer(result_page, many=True)
+
+    return paginator.get_paginated_response(serializer.data)
