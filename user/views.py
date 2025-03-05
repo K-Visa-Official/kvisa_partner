@@ -46,7 +46,7 @@ def register(request):
             user = serializer.save()
             user.set_password(password)  # 🔹 비밀번호 해싱 적용
             user.save()
-            return Response({"message": "회원가입 성공!", "user": serializer.data}, status=status.HTTP_201_CREATED)
+        return Response({"message": "회원가입 성공!", "user": serializer.data}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
         return Response({"message": f"회원가입 중 오류 발생: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -70,7 +70,8 @@ def login(request):
             refresh = RefreshToken.for_user(user)
             return Response({
                 'refresh': str(refresh),
-                'access': str(refresh.access_token)
+                'access': str(refresh.access_token),
+                'is_admin': user.is_admin,
             }, status=status.HTTP_200_OK)
         else:
             return Response({"message": "로그인 실패, 비밀번호를 확인해주세요."}, status=status.HTTP_400_BAD_REQUEST)
