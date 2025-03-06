@@ -209,7 +209,7 @@ def visa_intro(request) :
     # 비즈니스 필터 추가
     business = request.GET.get("business")
     if business:
-        filters &= Q(name__icontain=business)
+        filters &= Q(name__icontains=business)
     
     state = request.GET.get("state")
     if state:
