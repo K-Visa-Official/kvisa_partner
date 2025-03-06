@@ -222,14 +222,7 @@ def visa_intro(request) :
     # 생성 날짜 필터 추가
     create_at = request.GET.get("created_at")
     if create_at:
-        try:
-            # '2025.02.28' 형식을 'YYYY-MM-DD'로 변환
-            create_at_date = datetime.strptime(create_at, "%Y.%m.%d").date()
-            # 날짜만 비교
-            filters &= Q(created_at__date=create_at_date)
-        except ValueError:
-            pass
-
+        filters &= Q(created_at__date=create_at)
 
     # 데이터 필터링 및 페이징 처리
     queryset = ProcessUser.objects.filter(filters).order_by('-created_at')
@@ -471,9 +464,35 @@ def get_answer(request):
 @permission_classes([IsAuthenticated])
 def me_work(request):
     """로그인한 사용자의 ProcessUser 데이터만 필터링"""
-    process_users = ProcessUser.objects.select_related("process").filter(process__user=request.user.id)  # ✅ 필터링 추가
+
+    # 고객명 연락처 접수일자 진행상태 
+    state = request.GET.get("state")
+    name = request.GET.get("name")
+    created_at = request.GET.get("created_at")
+    
+    filters = Q()
+    
+    # 비즈니스 필터 추가
+    if name:
+        filters &= (Q(name=name) | Q(tel=name))
+
+    # 상태 필터링 추가 (옵션)
+    print(state)
+    if state:
+        if state == "10":  # 9일 때 0~4 필터링
+            filters &= Q(state__in=[0, 1, 2, 3, 4])
+        else:
+            filters &= Q(state=state)
+
+    # 접수일자 필터링 추가 (옵션)
+    if created_at:
+        filters &= Q(created_at__date=created_at)
+    
+
+    process_users = ProcessUser.objects.select_related("process").filter(process__user=request.user.id).filter(filters)  # ✅ 필터링 추가
     paginator = CustomPagination()
     result_page = paginator.paginate_queryset(process_users, request)
+
     serializer = ProcessUserSerializer(result_page, many=True)
 
     return paginator.get_paginated_response(serializer.data)
