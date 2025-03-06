@@ -209,7 +209,11 @@ def visa_intro(request) :
     # 비즈니스 필터 추가
     business = request.GET.get("business")
     if business:
-        filters &= Q(name=business)
+        if '^' in business:
+            business_name = business.split('^')[0]  # '^' 앞부분만 추출
+            filters &= Q(name=business_name)  # 이름만 필터링
+        else:
+            filters &= Q(name=business)
     
     state = request.GET.get("state")
     if state:
