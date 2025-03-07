@@ -383,20 +383,40 @@ def get_work_check(request):
     tel = request.GET.get("tel")
 
     name = request.GET.get("name")
-    if tel :
-        process = ProcessUser.objects.filter(tel = tel).order_by("-id")
-    elif "^" in name:
-        name_parts = name.split("^")  # "kimeender&&"에서 ["kimeender", ""]로 나눠짐
-    
-        # "kimeender"만 포함하는 경우
-        process = ProcessUser.objects.filter(
-            Q(name__contains=name_parts[0])  # 첫 번째 부분만 포함하는 필터링
-        ).order_by("-id")
-    else :
-        process = ProcessUser.objects.filter(name=name).order_by("-id")
 
+    lang = request.GET.get("lang")
+
+    from django.db.models import Q
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework import status
+from .models import ProcessUser
+from .serializers import ProcessUserSerializer
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_work_check(request):
+    tel = request.GET.get("tel")
+    name = request.GET.get("name")
+    lang = request.GET.get("lang")
+
+    filters = Q()
+
+    if tel:
+        filters &= Q(tel=tel)
+    if lang:
+        filters &= Q(lang=lang)
+    if name:
+        if "^" in name:
+            name_parts = name.split("^")[0]  # 첫 번째 부분만 사용
+            filters &= Q(name__icontains=name_parts)
+        else:
+            filters &= Q(name=name)
+
+    process = ProcessUser.objects.filter(filters).order_by("-id")
     serializer = ProcessUserSerializer(process, many=True)
-    
+
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 # 진행중인 업무 확인
