@@ -375,38 +375,19 @@ def pro_name_change(request):
     except ProcessUser.DoesNotExist:
         return Response({"error": "ProcessUser not found"}, status=status.HTTP_404_NOT_FOUND)       
 
-# 진행중인 업무 조회
-@api_view(['GET'])
-@permission_classes([AllowAny])
-def get_work_check(request):
-
-    tel = request.GET.get("tel")
-
-    name = request.GET.get("name")
-
-    lang = request.GET.get("lang")
-
-    from django.db.models import Q
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
-from rest_framework import status
-from .models import ProcessUser
-from .serializers import ProcessUserSerializer
-
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_work_check(request):
     tel = request.GET.get("tel")
     name = request.GET.get("name")
-    lang = request.GET.get("lang")
+    # lang = request.GET.get("lang")
 
     filters = Q()
 
     if tel:
         filters &= Q(tel=tel)
-    if lang:
-        filters &= Q(lang=lang)
+    # if lang:
+    #     filters &= Q(lang=lang)
     if name:
         if "^" in name:
             name_parts = name.split("^")[0]  # 첫 번째 부분만 사용
