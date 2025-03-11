@@ -8,7 +8,7 @@ from config.permissions import IsStaff
 from user.models import User
 from user.serializers import UserSerializer
 
-from config.paging import CustomPagination
+from config.paging import CustomPagination , CustomPagination_five
 from datetime import datetime
 from django.db.models import Q
 from django.http import JsonResponse
@@ -344,6 +344,15 @@ def post_work_user(request):
     except Process.DoesNotExist:
         return Response({"detail": "Process not found"}, status=status.HTTP_404_NOT_FOUND)
 
+    try:
+        # process_id에 해당하는 Process 객체 가져오기
+        process = Process.objects.get(id=user_id)
+        user = User.objects.get(id=process.user)  # process_id는 user_id를 통해 가져오는 방식으로 변경
+        user.work_business += 1 
+        user.save()
+    except User.DoesNotExist:
+        return Response({"detail": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+
     # ProcessUser 생성
     process_user = ProcessUser.objects.create(
         process=process,  # 유효한 Process 객체를 연결
@@ -477,8 +486,6 @@ def me_work(request):
     if name:
         filters &= (Q(name=name) | Q(tel=name))
 
-    # 상태 필터링 추가 (옵션)
-    print(state)
     if state:
         if state == "10":  # 9일 때 0~4 필터링
             filters &= Q(state__in=[0, 1, 2, 3, 4])
@@ -496,4 +503,34 @@ def me_work(request):
 
     serializer = ProcessUserSerializer(result_page, many=True)
 
+    return paginator.get_paginated_response(serializer.data)
+
+
+# 답변 확인하기
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def work_detail(request):
+    paginator = CustomPagination_five()
+
+    # GET 파라미터에서 'id' 가져오기 (기본값: None)
+    pk = request.GET.get("id")
+
+    # id 값 검증 (숫자인지 확인)
+    if not pk or not pk.isdigit():
+        return Response({"error": "올바른 'id' 값을 제공해야 합니다."}, status=400)
+    
+    pk = int(pk)  # 문자열을 정수로 변환
+
+    # 데이터 조회
+    process_queryset = ProcessUser.objects.filter(process__user=pk).order_by("-id")
+
+    # 데이터가 없을 경우 예외 처리
+    if not process_queryset.exists():
+        return Response({"message": "해당 사용자의 업무 데이터가 없습니다."}, status=200)
+
+    # 페이지네이션 적용
+    result_page = paginator.paginate_queryset(process_queryset, request)
+    
+    # 직렬화 후 응답 반환
+    serializer = ProcessUserSerializer(result_page, many=True)
     return paginator.get_paginated_response(serializer.data)

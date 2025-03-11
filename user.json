@@ -1,0 +1,140 @@
+[
+{
+    "model": "user.user",
+    "pk": 1,
+    "fields": {
+        "email": "kimkimtjd@naver.com",
+        "password": "pbkdf2_sha256$870000$sEslMcKMdJXjabUPVeeAvU$CxBAjkQwmk5RC1edMC7oiEKj7oj/YnwY7G3OOVvxqGY=",
+        "sign_in": "2025-02-18T07:55:13.377Z",
+        "last_login": "2025-03-11T01:48:28.563Z",
+        "bu_logo": "media/logo/20250218/d5f813a636c249ea88b79fb96526b34e_1-1_0.png",
+        "bu_name": "테스트",
+        "bu_intro": "테스트 소개란입니다",
+        "bu_name_ch": null,
+        "bu_intro_ch": null,
+        "bu_tel_first": "010-8075-8012",
+        "bu_tel_name": "김성원",
+        "bu_bank_name": "기업은행",
+        "bu_bank_number": "11111111111",
+        "work_count": 0,
+        "work_count_ch": 0,
+        "work_business": 0,
+        "is_admin": true
+    }
+},
+{
+    "model": "user.user",
+    "pk": 2,
+    "fields": {
+        "email": "kimtest",
+        "password": "pbkdf2_sha256$870000$16koDlQvTtr9n29Ejstn8G$r9psAfmF6UHbzcjJ5xG7s23Y1WtdYsvRoJpaAEIqL1c=",
+        "sign_in": "2025-02-24T03:31:56.011Z",
+        "last_login": "2025-03-10T08:15:19.811Z",
+        "bu_logo": "media/logo/20250226/494ec7e547cf4b8b8b4d5460542453f4_016.png",
+        "bu_name": "테스트",
+        "bu_intro": "테스트 수정",
+        "bu_name_ch": "김성원 중국어 수정",
+        "bu_intro_ch": "김성원 테스트 중국어 수정",
+        "bu_tel_first": "010-8075-8013",
+        "bu_tel_name": "김성원 수정",
+        "bu_bank_name": "기업은행",
+        "bu_bank_number": "12345678",
+        "work_count": 1,
+        "work_count_ch": 3,
+        "work_business": 10,
+        "is_admin": false
+    }
+},
+{
+    "model": "user.user",
+    "pk": 4,
+    "fields": {
+        "email": "lily891018@naver.com",
+        "password": "pbkdf2_sha256$870000$bpM1VpBIcPoEa9CjzHrS7P$smT096pmVYe70NyMGyEHmd6x3rogzaWK/lS0CmculSA=",
+        "sign_in": "2025-02-24T03:43:02.332Z",
+        "last_login": "2025-03-04T07:15:07.104Z",
+        "bu_logo": "media/logo/20250224/150815f2564e43fba2ea7f3b762a4e93_행정24.png",
+        "bu_name": "123",
+        "bu_intro": "456",
+        "bu_name_ch": "789",
+        "bu_intro_ch": "000",
+        "bu_tel_first": "010-8888-9999",
+        "bu_tel_name": "1234",
+        "bu_bank_name": "0000",
+        "bu_bank_number": "0000-0000",
+        "work_count": 1,
+        "work_count_ch": 6,
+        "work_business": 0,
+        "is_admin": false
+    }
+},
+{
+    "model": "user.user",
+    "pk": 5,
+    "fields": {
+        "email": "kimkimtjd",
+        "password": "pbkdf2_sha256$870000$u7nvjOBR1tO4i80NqHrvgm$ab6UjKFjoQ1HyY+qsBWnsEu1GQG/vhORsndn0Ovm1w8=",
+        "sign_in": "2025-02-24T03:51:38.688Z",
+        "last_login": "2025-03-07T00:47:41.403Z",
+        "bu_logo": "media/logo/20250224/bff05b40dc63454ab4b1833614a58145_1-3_0.png",
+        "bu_name": "asdjkh",
+        "bu_intro": "asdkjaskl",
+        "bu_name_ch": "sakjdhsajk",
+        "bu_intro_ch": "skdhu",
+        "bu_tel_first": "010-8903-0202",
+        "bu_tel_name": "sqkjadhja",
+        "bu_bank_name": "sdasdasd",
+        "bu_bank_number": "12345678",
+        "work_count": 0,
+        "work_count_ch": 0,
+        "work_business": 0,
+        "is_admin": false
+    }
+},
+{
+    "model": "user.user",
+    "pk": 6,
+    "fields": {
+        "email": "abc123@naver.com",
+        "password": "pbkdf2_sha256$870000$NKVqf9S6NR2IUI4qkSh8Gp$ot+D6VZwcls2HNwm9hfK6c4f7JrII5wKmqZGcLd1nYE=",
+        "sign_in": "2025-02-25T05:59:47.606Z",
+        "last_login": "2025-03-10T07:42:55.064Z",
+        "bu_logo": "media/logo/20250225/e534af7ae54e4c279eb265a1f71f6a36_images.png",
+        "bu_name": "JB전북은행",
+        "bu_intro": "브라보 코리아(BRAVO KOREA)",
+        "bu_name_ch": "JB全北银行",
+        "bu_intro_ch": "BRAVO KOREA",
+        "bu_tel_first": "010-2202-8953",
+        "bu_tel_name": "이상욱",
+        "bu_bank_name": null,
+        "bu_bank_number": null,
+        "work_count": 2,
+        "work_count_ch": 2,
+        "work_business": 0,
+        "is_admin": false
+    }
+},
+{
+    "model": "user.user",
+    "pk": 7,
+    "fields": {
+        "email": "kvisa0608",
+        "password": "pbkdf2_sha256$870000$3D7W6sNO3ij0Bw9Q0iQ9Pw$ruqq0xUtr/sWmfZOMwkY8Aiie6hPvb+MQzLYEtgQvqU=",
+        "sign_in": "2025-03-10T07:46:17.503Z",
+        "last_login": "2025-03-10T07:50:59.938Z",
+        "bu_logo": "media/logo/20250310/3c366c9b9eea4b38ba7d163de5b66354_messageImage_1739153632520_0.jpg",
+        "bu_name": "케이비자",
+        "bu_intro": "대한민국 1등 외국인 비자서비스",
+        "bu_name_ch": "케이비자 ( 중국어 )",
+        "bu_intro_ch": "대한민국 1등 외국인 비자서비스 ( 중국어 )",
+        "bu_tel_first": "010-2202-8953",
+        "bu_tel_name": "이상욱",
+        "bu_bank_name": "ibk기업은행",
+        "bu_bank_number": "11234",
+        "work_count": 1,
+        "work_count_ch": 19,
+        "work_business": 0,
+        "is_admin": false
+    }
+}
+]

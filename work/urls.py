@@ -34,4 +34,7 @@ urlpatterns = [
     path('client/work/state/<int:id>/', views.change_state, name='change_work_state'),  # 진행상태 변경
 
     path('client/worklist/', views.me_work, name='worklist'),  # 의뢰인 업무리스트
+
+
+    path('client/workdetail/', views.work_detail, name='worklist'),  # 의뢰인 업무리스트
 ]

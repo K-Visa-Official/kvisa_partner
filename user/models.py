@@ -39,7 +39,6 @@ class User(AbstractBaseUser):
     bu_name_ch = models.CharField('업체이름(중국어)', max_length=50, null=True)
     bu_intro_ch = models.CharField('업체소개(중국어)', max_length=50, null=True)
     
-
     bu_tel_first = models.CharField('담당자 연락처', max_length=20 , null=True) 
     bu_tel_name = models.CharField('담당자 이름', max_length=20 , null=True)
 
@@ -47,7 +46,8 @@ class User(AbstractBaseUser):
     bu_bank_number = models.CharField('통장 번호', max_length=20 , null=True)
     work_count = models.IntegerField(default=0, verbose_name="한국건수")
     work_count_ch = models.IntegerField(default=0, verbose_name="중국건수")
-
+    work_business = models.IntegerField(default=0, verbose_name="유입되는 회원수")
+    
     is_admin = models.BooleanField(default=False, verbose_name="관리자 권한")
     # bu_post = models.CharField('주소', max_length=50)
     # bu_tel_second = models.CharField('2번째 연락처', max_length=20)

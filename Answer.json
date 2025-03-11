@@ -1,0 +1,2909 @@
+[
+{
+    "model": "work.answer",
+    "pk": 1,
+    "fields": {
+        "question": 1,
+        "answer": "단일",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 2,
+    "fields": {
+        "question": 1,
+        "answer": "단일 2",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 3,
+    "fields": {
+        "question": 1,
+        "answer": "단일 3",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 4,
+    "fields": {
+        "question": 1,
+        "answer": "단일 4",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 5,
+    "fields": {
+        "question": 1,
+        "answer": "단일 5",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 6,
+    "fields": {
+        "question": 2,
+        "answer": "단문형 답변",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 7,
+    "fields": {
+        "question": 3,
+        "answer": "복수형 답변1",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 8,
+    "fields": {
+        "question": 4,
+        "answer": "복수형 답변2",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 9,
+    "fields": {
+        "question": 4,
+        "answer": "복수형 답변3",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 10,
+    "fields": {
+        "question": 4,
+        "answer": "복수형 답변4",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 11,
+    "fields": {
+        "question": 4,
+        "answer": "복수형 답변",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 27,
+    "fields": {
+        "question": 10,
+        "answer": "022",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 28,
+    "fields": {
+        "question": 11,
+        "answer": "044",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 29,
+    "fields": {
+        "question": 13,
+        "answer": "E9签证",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 30,
+    "fields": {
+        "question": 13,
+        "answer": "F4签证",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 31,
+    "fields": {
+        "question": 13,
+        "answer": "F2签证(居住)",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 32,
+    "fields": {
+        "question": 13,
+        "answer": "F5永驻(永驻权)",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 33,
+    "fields": {
+        "question": 13,
+        "answer": "F6签证(结婚移民)",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 46,
+    "fields": {
+        "question": 15,
+        "answer": "在韩国大学毕业",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 47,
+    "fields": {
+        "question": 15,
+        "answer": "在韩国硕士毕业",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 48,
+    "fields": {
+        "question": 15,
+        "answer": "海外大学毕业",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 49,
+    "fields": {
+        "question": 15,
+        "answer": "海外硕士毕业",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 50,
+    "fields": {
+        "question": 15,
+        "answer": "高中/初中",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 51,
+    "fields": {
+        "question": 15,
+        "answer": "其他",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 52,
+    "fields": {
+        "question": 16,
+        "answer": "19岁 ~ 26岁",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 53,
+    "fields": {
+        "question": 16,
+        "answer": "27岁 ~ 33岁",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 54,
+    "fields": {
+        "question": 16,
+        "answer": "34岁  ~ 40岁",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 55,
+    "fields": {
+        "question": 16,
+        "answer": "41岁  ~ 60岁",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 56,
+    "fields": {
+        "question": 16,
+        "answer": "60岁以上",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 57,
+    "fields": {
+        "question": 18,
+        "answer": "中国",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 58,
+    "fields": {
+        "question": 18,
+        "answer": "缅甸",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 59,
+    "fields": {
+        "question": 18,
+        "answer": "尼泊尔",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 60,
+    "fields": {
+        "question": 18,
+        "answer": "印度尼西亚",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 61,
+    "fields": {
+        "question": 18,
+        "answer": "其他",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 62,
+    "fields": {
+        "question": 21,
+        "answer": "中国",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 63,
+    "fields": {
+        "question": 21,
+        "answer": "缅甸",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 64,
+    "fields": {
+        "question": 21,
+        "answer": "尼泊尔",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 65,
+    "fields": {
+        "question": 21,
+        "answer": "印度尼西亚",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 66,
+    "fields": {
+        "question": 21,
+        "answer": "其他",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 283,
+    "fields": {
+        "question": 81,
+        "answer": "단일  수정",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 284,
+    "fields": {
+        "question": 81,
+        "answer": "단일2  수정",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 285,
+    "fields": {
+        "question": 81,
+        "answer": "단일3  수정",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 286,
+    "fields": {
+        "question": 81,
+        "answer": "단일5  수정",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 287,
+    "fields": {
+        "question": 82,
+        "answer": "ㅁㄴㅇㅁㄴㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 288,
+    "fields": {
+        "question": 82,
+        "answer": "ㅎㅇㄴㅇㅁㄴ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 289,
+    "fields": {
+        "question": 82,
+        "answer": "ㅇㄹㄴㅇ",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 290,
+    "fields": {
+        "question": 82,
+        "answer": "ㄴㄹ  수정",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 291,
+    "fields": {
+        "question": 82,
+        "answer": "ㅇㄹㄴㅇㄹㄴㅇㄹ  수정",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 292,
+    "fields": {
+        "question": 83,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 293,
+    "fields": {
+        "question": 84,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 294,
+    "fields": {
+        "question": 85,
+        "answer": "ㄴㅇㄹㄴ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 295,
+    "fields": {
+        "question": 85,
+        "answer": "ㅇㄹㄴㅇㅇㄴ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 296,
+    "fields": {
+        "question": 85,
+        "answer": "ㄹㄴㄹ",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 297,
+    "fields": {
+        "question": 85,
+        "answer": "ㅇㅎㄹ곳ㄷㄱ",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 856,
+    "fields": {
+        "question": 215,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 857,
+    "fields": {
+        "question": 216,
+        "answer": "E9비자",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 858,
+    "fields": {
+        "question": 216,
+        "answer": "F4비자",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 859,
+    "fields": {
+        "question": 216,
+        "answer": "H2비자",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 860,
+    "fields": {
+        "question": 216,
+        "answer": "F2비자",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 861,
+    "fields": {
+        "question": 216,
+        "answer": "F5비자",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 862,
+    "fields": {
+        "question": 216,
+        "answer": "F6비자",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 863,
+    "fields": {
+        "question": 216,
+        "answer": "기타",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 864,
+    "fields": {
+        "question": 217,
+        "answer": "E-7-4비자",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 865,
+    "fields": {
+        "question": 217,
+        "answer": "F4재외동포비자",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 866,
+    "fields": {
+        "question": 217,
+        "answer": "F5영주권비자",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 867,
+    "fields": {
+        "question": 217,
+        "answer": "D8투자비자",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 868,
+    "fields": {
+        "question": 217,
+        "answer": "F3동반 가족초청비자",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 869,
+    "fields": {
+        "question": 217,
+        "answer": "F2거주 비자",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 870,
+    "fields": {
+        "question": 217,
+        "answer": "F-6-2이혼 비자",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 871,
+    "fields": {
+        "question": 217,
+        "answer": "한국귀화",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 872,
+    "fields": {
+        "question": 217,
+        "answer": "임금 체불/산업재해 처리",
+        "answer_count": 9
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 873,
+    "fields": {
+        "question": 217,
+        "answer": "음주운전/사범업무 처리",
+        "answer_count": 10
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 874,
+    "fields": {
+        "question": 217,
+        "answer": "법률 컨설팅",
+        "answer_count": 11
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 875,
+    "fields": {
+        "question": 217,
+        "answer": "기타",
+        "answer_count": 12
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 876,
+    "fields": {
+        "question": 218,
+        "answer": "19~26",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 877,
+    "fields": {
+        "question": 218,
+        "answer": "27~33",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 878,
+    "fields": {
+        "question": 218,
+        "answer": "34~40",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 879,
+    "fields": {
+        "question": 218,
+        "answer": "41~60",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 880,
+    "fields": {
+        "question": 218,
+        "answer": "60세이상",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 881,
+    "fields": {
+        "question": 219,
+        "answer": "2500만원 미만",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 882,
+    "fields": {
+        "question": 219,
+        "answer": "2500~3000만원",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 883,
+    "fields": {
+        "question": 219,
+        "answer": "3000~4250만원",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 884,
+    "fields": {
+        "question": 219,
+        "answer": "4250만원 이상",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 885,
+    "fields": {
+        "question": 220,
+        "answer": "1년 미만",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 886,
+    "fields": {
+        "question": 220,
+        "answer": "1~2년",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 887,
+    "fields": {
+        "question": 220,
+        "answer": "2~3년",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 888,
+    "fields": {
+        "question": 220,
+        "answer": "3~4년",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 889,
+    "fields": {
+        "question": 220,
+        "answer": "4년 이상",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 890,
+    "fields": {
+        "question": 221,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 891,
+    "fields": {
+        "question": 222,
+        "answer": "3개월 이상 불법한 적 있음",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 892,
+    "fields": {
+        "question": 222,
+        "answer": "벌금 100만원 이상의 형을 받은 자",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 893,
+    "fields": {
+        "question": 222,
+        "answer": "출입국관리법 4회 이상 위반자",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 894,
+    "fields": {
+        "question": 222,
+        "answer": "한국에 세금을 체납함",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 895,
+    "fields": {
+        "question": 222,
+        "answer": "없음",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 896,
+    "fields": {
+        "question": 223,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 897,
+    "fields": {
+        "question": 224,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 898,
+    "fields": {
+        "question": 225,
+        "answer": "10~12시",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 899,
+    "fields": {
+        "question": 225,
+        "answer": "13~15시",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 900,
+    "fields": {
+        "question": 225,
+        "answer": "15~17시",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 901,
+    "fields": {
+        "question": 225,
+        "answer": "17~18시",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 902,
+    "fields": {
+        "question": 226,
+        "answer": "한국에서 체류하고 있음",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 903,
+    "fields": {
+        "question": 226,
+        "answer": "해외에서 체류하고 있음",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 904,
+    "fields": {
+        "question": 227,
+        "answer": "불법체류 구제",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 905,
+    "fields": {
+        "question": 227,
+        "answer": "외국인 범죄/사범 구제",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 906,
+    "fields": {
+        "question": 227,
+        "answer": "기타",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 907,
+    "fields": {
+        "question": 228,
+        "answer": "적발되기 이전 상태",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 908,
+    "fields": {
+        "question": 228,
+        "answer": "적발 후 경찰조사 대기 중",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 909,
+    "fields": {
+        "question": 228,
+        "answer": "경찰조사 완료",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 910,
+    "fields": {
+        "question": 228,
+        "answer": "범칙금 통지서 발급 또는 납부완료",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 911,
+    "fields": {
+        "question": 228,
+        "answer": "출입국 사범과 조사 대기 중",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 912,
+    "fields": {
+        "question": 228,
+        "answer": "강제퇴거/출국명령 통지서 수령",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 913,
+    "fields": {
+        "question": 228,
+        "answer": "자진 출국 준비 중",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 914,
+    "fields": {
+        "question": 228,
+        "answer": "잘 모름",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 915,
+    "fields": {
+        "question": 229,
+        "answer": "단기비자 (C-3) or 관광",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 916,
+    "fields": {
+        "question": 229,
+        "answer": "유학비자 (D-2/D-4)",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 917,
+    "fields": {
+        "question": 229,
+        "answer": "구직비자 (D-10)",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 918,
+    "fields": {
+        "question": 229,
+        "answer": "취업비자 (E-1~ E-7 ~ E-9)",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 919,
+    "fields": {
+        "question": 229,
+        "answer": "거주비자 (F-1~ F-3)",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 920,
+    "fields": {
+        "question": 229,
+        "answer": "결혼비자 (F-6)",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 921,
+    "fields": {
+        "question": 229,
+        "answer": "재외동포 (F-4)",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 922,
+    "fields": {
+        "question": 229,
+        "answer": "방문취업 (H-2)",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 923,
+    "fields": {
+        "question": 229,
+        "answer": "영주자격 (F-5)",
+        "answer_count": 9
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 924,
+    "fields": {
+        "question": 229,
+        "answer": "불법체류 중",
+        "answer_count": 10
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 925,
+    "fields": {
+        "question": 229,
+        "answer": "기타",
+        "answer_count": 11
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 926,
+    "fields": {
+        "question": 230,
+        "answer": "6개월 미만",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 927,
+    "fields": {
+        "question": 230,
+        "answer": "6~12개월",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 928,
+    "fields": {
+        "question": 230,
+        "answer": "13~24개월",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 929,
+    "fields": {
+        "question": 230,
+        "answer": "24~36개월",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 930,
+    "fields": {
+        "question": 230,
+        "answer": "37개월 이상",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 931,
+    "fields": {
+        "question": 230,
+        "answer": "불법체류 아님",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 932,
+    "fields": {
+        "question": 231,
+        "answer": "네. 한국에서 법을 위반한 적이 있습니다.",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 933,
+    "fields": {
+        "question": 231,
+        "answer": "아니요. 단 한번도 한국에서 법을 위반한 적이 없습니다.",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 934,
+    "fields": {
+        "question": 232,
+        "answer": "한국인과 혼인신고 완료 후 결혼생활 중",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 935,
+    "fields": {
+        "question": 232,
+        "answer": "한국에서 자녀를 양육 중",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 936,
+    "fields": {
+        "question": 232,
+        "answer": "부모 또는 자녀, 배우자가 장애를 보유하고 있음",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 937,
+    "fields": {
+        "question": 232,
+        "answer": "부모님이 노인 요양원에서 생활하는 중",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 938,
+    "fields": {
+        "question": 232,
+        "answer": "한국에서 회사 대표자로 근무 중",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 939,
+    "fields": {
+        "question": 232,
+        "answer": "한국에서 봉사활동을 해서 받은 봉사활동확인서가 있음",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 940,
+    "fields": {
+        "question": 232,
+        "answer": "본인 또는 배우자가 임신 중",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 941,
+    "fields": {
+        "question": 232,
+        "answer": "한국에서 은행/카드 빚이 500만원 이상 보유 중",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 942,
+    "fields": {
+        "question": 232,
+        "answer": "한국에서 가족의 생계를 위한 생활비를 혼자서 벌어야 함",
+        "answer_count": 9
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 943,
+    "fields": {
+        "question": 232,
+        "answer": "본인 또는 배우자, 미성년 자녀가 영주자격 보유",
+        "answer_count": 10
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 944,
+    "fields": {
+        "question": 232,
+        "answer": "본인 또는 배우자, 미성년 자녀가 재외동포자격 보유",
+        "answer_count": 11
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 945,
+    "fields": {
+        "question": 232,
+        "answer": "질병이나 관리가 필요한 중대한 질병을 보유 중",
+        "answer_count": 12
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 946,
+    "fields": {
+        "question": 232,
+        "answer": "본국에 돌아갈 수 없는 인도적인 사유를 보유 중",
+        "answer_count": 13
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 947,
+    "fields": {
+        "question": 233,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 948,
+    "fields": {
+        "question": 234,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 949,
+    "fields": {
+        "question": 235,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 950,
+    "fields": {
+        "question": 236,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 951,
+    "fields": {
+        "question": 236,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 952,
+    "fields": {
+        "question": 237,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 953,
+    "fields": {
+        "question": 238,
+        "answer": "E9签证",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 954,
+    "fields": {
+        "question": 238,
+        "answer": "F4签证",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 955,
+    "fields": {
+        "question": 238,
+        "answer": "H2签证",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 956,
+    "fields": {
+        "question": 238,
+        "answer": "F2签证",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 957,
+    "fields": {
+        "question": 238,
+        "answer": "F5签证",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 958,
+    "fields": {
+        "question": 238,
+        "answer": "F6签证",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 959,
+    "fields": {
+        "question": 238,
+        "answer": "其他签证",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 960,
+    "fields": {
+        "question": 239,
+        "answer": "E-7-4签证",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 961,
+    "fields": {
+        "question": 239,
+        "answer": "F4同胞签证",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 962,
+    "fields": {
+        "question": 239,
+        "answer": "F5永住签证",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 963,
+    "fields": {
+        "question": 239,
+        "answer": "D8投资签证",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 964,
+    "fields": {
+        "question": 239,
+        "answer": "F3同伴/家人邀请签证",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 965,
+    "fields": {
+        "question": 239,
+        "answer": "F2居住签证",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 966,
+    "fields": {
+        "question": 239,
+        "answer": "F-6-2离婚签证",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 967,
+    "fields": {
+        "question": 239,
+        "answer": "韩国国籍归化",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 968,
+    "fields": {
+        "question": 239,
+        "answer": "拖欠薪资/职业灾害受理",
+        "answer_count": 9
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 969,
+    "fields": {
+        "question": 239,
+        "answer": "酒后开车/其他犯罪问题处理",
+        "answer_count": 10
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 970,
+    "fields": {
+        "question": 239,
+        "answer": "法律谘询",
+        "answer_count": 11
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 971,
+    "fields": {
+        "question": 239,
+        "answer": "其他",
+        "answer_count": 12
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 972,
+    "fields": {
+        "question": 240,
+        "answer": "19~26",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 973,
+    "fields": {
+        "question": 240,
+        "answer": "27~33",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 974,
+    "fields": {
+        "question": 240,
+        "answer": "34~40",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 975,
+    "fields": {
+        "question": 240,
+        "answer": "41~60",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 976,
+    "fields": {
+        "question": 240,
+        "answer": "60以上",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 977,
+    "fields": {
+        "question": 241,
+        "answer": "未满2500万",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 978,
+    "fields": {
+        "question": 241,
+        "answer": "2500~3000万",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 979,
+    "fields": {
+        "question": 241,
+        "answer": "3000~4250万",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 980,
+    "fields": {
+        "question": 241,
+        "answer": "4250万以上",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 981,
+    "fields": {
+        "question": 242,
+        "answer": "不满1年",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 982,
+    "fields": {
+        "question": 242,
+        "answer": "1~2年",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 983,
+    "fields": {
+        "question": 242,
+        "answer": "2~3年",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 984,
+    "fields": {
+        "question": 242,
+        "answer": "3~4年",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 985,
+    "fields": {
+        "question": 242,
+        "answer": "4年以上",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 986,
+    "fields": {
+        "question": 244,
+        "answer": "有三个月以上违法滞留的经历",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 987,
+    "fields": {
+        "question": 244,
+        "answer": "有被罚款过100万以上的罚金",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 988,
+    "fields": {
+        "question": 244,
+        "answer": "违反出入境法4次以上",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 989,
+    "fields": {
+        "question": 244,
+        "answer": "韩国税金滞纳",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 990,
+    "fields": {
+        "question": 244,
+        "answer": "以上都没有",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 991,
+    "fields": {
+        "question": 247,
+        "answer": "10:00~12:00",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 992,
+    "fields": {
+        "question": 247,
+        "answer": "13:00~15:00",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 993,
+    "fields": {
+        "question": 247,
+        "answer": "15:00~17:00",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 994,
+    "fields": {
+        "question": 247,
+        "answer": "17:00~18:00",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 995,
+    "fields": {
+        "question": 248,
+        "answer": "目前滞留在韩国",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 996,
+    "fields": {
+        "question": 248,
+        "answer": "目前滞留在国外",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 997,
+    "fields": {
+        "question": 249,
+        "answer": "非法滞留救济",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 998,
+    "fields": {
+        "question": 249,
+        "answer": "外国人犯罪/犯罪救济",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 999,
+    "fields": {
+        "question": 249,
+        "answer": "其他",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1000,
+    "fields": {
+        "question": 250,
+        "answer": "还没被发现 ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1001,
+    "fields": {
+        "question": 250,
+        "answer": "检举揭发后，警方正在等待调查",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1002,
+    "fields": {
+        "question": 250,
+        "answer": "警方调查结束",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1003,
+    "fields": {
+        "question": 250,
+        "answer": "罚款通知书签发或缴纳完毕",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1004,
+    "fields": {
+        "question": 250,
+        "answer": "出入境犯罪科正在等待调查",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1005,
+    "fields": {
+        "question": 250,
+        "answer": "领取强制出境/出境命令通知书",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1006,
+    "fields": {
+        "question": 250,
+        "answer": "自愿出国准备中",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1007,
+    "fields": {
+        "question": 250,
+        "answer": "不知道",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1008,
+    "fields": {
+        "question": 251,
+        "answer": "短期签证( C-3) or K-ETA",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1009,
+    "fields": {
+        "question": 251,
+        "answer": "留学签证(D-2/D-4)",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1010,
+    "fields": {
+        "question": 251,
+        "answer": "就业签证 (E-1~ E-7 ~ E-9)",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1011,
+    "fields": {
+        "question": 251,
+        "answer": "居住签证 (F-1~ F-3)",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1012,
+    "fields": {
+        "question": 251,
+        "answer": "结婚签证 (F-6)",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1013,
+    "fields": {
+        "question": 251,
+        "answer": "在外同胞 (F-4)",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1014,
+    "fields": {
+        "question": 251,
+        "answer": "永久居留资格( F-5)",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1015,
+    "fields": {
+        "question": 251,
+        "answer": "非法居留",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1016,
+    "fields": {
+        "question": 251,
+        "answer": "其他",
+        "answer_count": 9
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1017,
+    "fields": {
+        "question": 252,
+        "answer": "未满6个月",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1018,
+    "fields": {
+        "question": 252,
+        "answer": "6~12个月",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1019,
+    "fields": {
+        "question": 252,
+        "answer": "13~24个月",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1020,
+    "fields": {
+        "question": 252,
+        "answer": "24~36个月",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1021,
+    "fields": {
+        "question": 252,
+        "answer": "37个月以上",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1022,
+    "fields": {
+        "question": 252,
+        "answer": "不是非法滞留",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1023,
+    "fields": {
+        "question": 253,
+        "answer": "是的。我在韩国违反过法律",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1024,
+    "fields": {
+        "question": 253,
+        "answer": "没有，一次也没有在韩国违反过法律。",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1025,
+    "fields": {
+        "question": 253,
+        "answer": "不知道",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1026,
+    "fields": {
+        "question": 254,
+        "answer": "与韩国人结婚登记后结婚生活中",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1027,
+    "fields": {
+        "question": 254,
+        "answer": "在韩国抚养子女",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1028,
+    "fields": {
+        "question": 254,
+        "answer": "父母或子女、配偶有残疾",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1029,
+    "fields": {
+        "question": 254,
+        "answer": "父母在老年护理院生活",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1030,
+    "fields": {
+        "question": 254,
+        "answer": "在韩国作为公司代表工作",
+        "answer_count": 5
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1031,
+    "fields": {
+        "question": 254,
+        "answer": "有在韩国做志愿活动时收到的志愿活动确认书",
+        "answer_count": 6
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1032,
+    "fields": {
+        "question": 254,
+        "answer": "本人或配偶怀孕中",
+        "answer_count": 7
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1033,
+    "fields": {
+        "question": 254,
+        "answer": "在韩国拥有500万韩元以上的银行/信用卡债务",
+        "answer_count": 8
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1034,
+    "fields": {
+        "question": 254,
+        "answer": "在韩国家庭要自己挣生活费",
+        "answer_count": 9
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1035,
+    "fields": {
+        "question": 254,
+        "answer": "本人或配偶，未成年子女拥有永久居住资格",
+        "answer_count": 10
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1036,
+    "fields": {
+        "question": 254,
+        "answer": "本人或配偶，未成年子女拥有在外同胞资格",
+        "answer_count": 11
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1037,
+    "fields": {
+        "question": 254,
+        "answer": "携带疾病或需要管理的重大疾病",
+        "answer_count": 12
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1038,
+    "fields": {
+        "question": 254,
+        "answer": "拥有无法返回本国的人道主义理由。",
+        "answer_count": 13
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1039,
+    "fields": {
+        "question": 254,
+        "answer": "无相应事项",
+        "answer_count": 14
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1040,
+    "fields": {
+        "question": 255,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1041,
+    "fields": {
+        "question": 256,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1043,
+    "fields": {
+        "question": 243,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1044,
+    "fields": {
+        "question": 245,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1045,
+    "fields": {
+        "question": 246,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1046,
+    "fields": {
+        "question": 258,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1047,
+    "fields": {
+        "question": 258,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1048,
+    "fields": {
+        "question": 258,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1049,
+    "fields": {
+        "question": 259,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1050,
+    "fields": {
+        "question": 259,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1051,
+    "fields": {
+        "question": 259,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1052,
+    "fields": {
+        "question": 260,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1053,
+    "fields": {
+        "question": 260,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1054,
+    "fields": {
+        "question": 260,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1055,
+    "fields": {
+        "question": 261,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1056,
+    "fields": {
+        "question": 261,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1057,
+    "fields": {
+        "question": 261,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1058,
+    "fields": {
+        "question": 262,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1059,
+    "fields": {
+        "question": 262,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1060,
+    "fields": {
+        "question": 262,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1061,
+    "fields": {
+        "question": 263,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1062,
+    "fields": {
+        "question": 263,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1063,
+    "fields": {
+        "question": 263,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1064,
+    "fields": {
+        "question": 264,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1065,
+    "fields": {
+        "question": 264,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1066,
+    "fields": {
+        "question": 264,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1067,
+    "fields": {
+        "question": 265,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1068,
+    "fields": {
+        "question": 266,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1069,
+    "fields": {
+        "question": 266,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1070,
+    "fields": {
+        "question": 266,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1071,
+    "fields": {
+        "question": 267,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1072,
+    "fields": {
+        "question": 268,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1073,
+    "fields": {
+        "question": 268,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1074,
+    "fields": {
+        "question": 268,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1075,
+    "fields": {
+        "question": 269,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1076,
+    "fields": {
+        "question": 270,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1077,
+    "fields": {
+        "question": 270,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1078,
+    "fields": {
+        "question": 270,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1079,
+    "fields": {
+        "question": 271,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1080,
+    "fields": {
+        "question": 272,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1081,
+    "fields": {
+        "question": 272,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1082,
+    "fields": {
+        "question": 272,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1083,
+    "fields": {
+        "question": 273,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1084,
+    "fields": {
+        "question": 274,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1085,
+    "fields": {
+        "question": 274,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1086,
+    "fields": {
+        "question": 274,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1087,
+    "fields": {
+        "question": 275,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1088,
+    "fields": {
+        "question": 276,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1089,
+    "fields": {
+        "question": 276,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1090,
+    "fields": {
+        "question": 276,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1091,
+    "fields": {
+        "question": 277,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1092,
+    "fields": {
+        "question": 278,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1093,
+    "fields": {
+        "question": 278,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1094,
+    "fields": {
+        "question": 278,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1095,
+    "fields": {
+        "question": 279,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1096,
+    "fields": {
+        "question": 280,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1097,
+    "fields": {
+        "question": 280,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1098,
+    "fields": {
+        "question": 280,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1099,
+    "fields": {
+        "question": 280,
+        "answer": "ㅍㄷㄷㅂ",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1100,
+    "fields": {
+        "question": 281,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1101,
+    "fields": {
+        "question": 282,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1102,
+    "fields": {
+        "question": 282,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1103,
+    "fields": {
+        "question": 282,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1104,
+    "fields": {
+        "question": 282,
+        "answer": "ㅍㄷㄷㅂ",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1105,
+    "fields": {
+        "question": 283,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1106,
+    "fields": {
+        "question": 284,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1107,
+    "fields": {
+        "question": 284,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1108,
+    "fields": {
+        "question": 284,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1109,
+    "fields": {
+        "question": 284,
+        "answer": "ㅍㄷㄷㅂ",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1110,
+    "fields": {
+        "question": 285,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1111,
+    "fields": {
+        "question": 286,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1112,
+    "fields": {
+        "question": 286,
+        "answer": "ㅇㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1113,
+    "fields": {
+        "question": 286,
+        "answer": "ㅂ124",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1114,
+    "fields": {
+        "question": 286,
+        "answer": "ㅍㄷㄷㅂ",
+        "answer_count": 4
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1115,
+    "fields": {
+        "question": 287,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1116,
+    "fields": {
+        "question": 288,
+        "answer": "ㅇㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1117,
+    "fields": {
+        "question": 288,
+        "answer": "ㅇㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1118,
+    "fields": {
+        "question": 289,
+        "answer": "ㅇㄴㄹ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1119,
+    "fields": {
+        "question": 289,
+        "answer": "ㅇㄹ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1120,
+    "fields": {
+        "question": 289,
+        "answer": "ㄴㅇㄹㄴㅇㄹㄴㅇ",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1121,
+    "fields": {
+        "question": 290,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1122,
+    "fields": {
+        "question": 291,
+        "answer": "ㅁㄴㅇㅁㄴㅇ",
+        "answer_count": 1
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1123,
+    "fields": {
+        "question": 291,
+        "answer": "ㅁㄴㅇㅁㅇ",
+        "answer_count": 2
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1124,
+    "fields": {
+        "question": 291,
+        "answer": "ㅁㄴㅇㅁㄴㅇ",
+        "answer_count": 3
+    }
+},
+{
+    "model": "work.answer",
+    "pk": 1125,
+    "fields": {
+        "question": 292,
+        "answer": "입력형",
+        "answer_count": 0
+    }
+}
+]

@@ -1,0 +1,457 @@
+[
+{
+    "model": "work.work",
+    "pk": 1,
+    "fields": {
+        "user": "2",
+        "language": 1,
+        "choice": "외국인 범죄/불법체류자 구제",
+        "work_detail": "중국어 업무 등록",
+        "detail": "media/detail/20250224/693752fc90244b77a7a163af455fc352_1-3_0.png",
+        "detail_second": "media/detail_second/20250224/c8771168c9684e4a9edcd2ac75f0dc3b_1-3_0.png",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 3,
+    "fields": {
+        "user": "4",
+        "language": 1,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "123456",
+        "detail": "media/detail/20250224/8a32ebbdccf842c4af3a541e507bc0a1_vvvvv.png",
+        "detail_second": "media/detail_second/20250224/3354847254c44d369ccbec351d4985d0_1_1_1_홈_로그인_전__10.png",
+        "order": 2
+    }
+},
+{
+    "model": "work.work",
+    "pk": 4,
+    "fields": {
+        "user": "4",
+        "language": 1,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "客製化签证谘询服务",
+        "detail": "media/detail/20250224/ec844869c82c4deeb6f05d3bb127dd75_아트보드__2.png",
+        "detail_second": "media/detail_second/20250224/0fa46bfac8aa439199fdb0768c4c382d_외국인_맞춤형_비자상담__2.png",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 5,
+    "fields": {
+        "user": "4",
+        "language": 1,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "问卷调查",
+        "detail": "media/detail/20250224/7952570714424fe6baf27e9742f61e78_아트보드__3.png",
+        "detail_second": "media/detail_second/20250224/6741c033f9db48a08d7a38183e285172_외국인_맞춤형_비자상담__3.png",
+        "order": 5
+    }
+},
+{
+    "model": "work.work",
+    "pk": 6,
+    "fields": {
+        "user": "4",
+        "language": 1,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "问卷调查",
+        "detail": "media/detail/20250224/9f9fd4be9b164b4ebb8a894a68590ad7_아트보드__3.png",
+        "detail_second": "media/detail_second/20250224/92d87496c0e04a1ca64a2ca0951392e3_외국인_맞춤형_비자상담__3.png",
+        "order": 3
+    }
+},
+{
+    "model": "work.work",
+    "pk": 7,
+    "fields": {
+        "user": "4",
+        "language": 1,
+        "choice": "외국인 범죄/불법체류자 구제",
+        "work_detail": "범죄/불법체류자 구제",
+        "detail": "media/detail/20250224/b522df7b1628433c9c9c3a7b3340bf92_acs.png",
+        "detail_second": "media/detail_second/20250224/c9489b5c4acc45ee908fa894f49c9d57_외국인_맞춤형_비자상담__4.png",
+        "order": 3
+    }
+},
+{
+    "model": "work.work",
+    "pk": 8,
+    "fields": {
+        "user": "4",
+        "language": 1,
+        "choice": "외국인 범죄/불법체류자 구제",
+        "work_detail": "범죄/불법체류자 구제",
+        "detail": "media/detail/20250224/0d85b416974f495a88c0be6ecf84777b_acs.png",
+        "detail_second": "media/detail_second/20250224/a103f4c10a1242edb88e6e66119d1ced_외국인_맞춤형_비자상담__4.png",
+        "order": 5
+    }
+},
+{
+    "model": "work.work",
+    "pk": 15,
+    "fields": {
+        "user": "2",
+        "language": 0,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "한국어 업무 등록",
+        "detail": "media/detail/20250226/f4efc2118ab5458d9163255d4ddb66c9_016.png",
+        "detail_second": "media/detail_second/20250228/9178d47c26e44c62ba657b20d3499c8e_CRM_banner.svg",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 28,
+    "fields": {
+        "user": "6",
+        "language": 0,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "타 업체대비 평균 30%가 저렴하게 업무를 진행 할 수 있어요",
+        "detail": "media/detail/20250228/c86005dc1ea94c49853a8c164d87fcd5_맞춤상담.png",
+        "detail_second": "media/detail_second/20250228/733a3b1bce6442da8a403fbff7272251_외국인_맞춤형_비자상담__4.png",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 29,
+    "fields": {
+        "user": "6",
+        "language": 0,
+        "choice": "외국인 범죄/불법체류자 구제",
+        "work_detail": "국내에서 발생한 외국인 문제를 상담받고, 해결하세요",
+        "detail": "media/detail/20250228/bda2360141f6414ca18d83084447d10c_범죄구제.png",
+        "detail_second": "media/detail_second/20250228/4c8d7dec8cf844c8b15e8e95cc2b6f91_외국인_맞춤형_비자상담__5.png",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 30,
+    "fields": {
+        "user": "4",
+        "language": 0,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "비자상담 진행",
+        "detail": "media/detail/20250304/28e5723ba2d5466cad9d7bff03bbdc6d_IMG_8478.PNG",
+        "detail_second": "media/detail_second/20250304/ad7c8afbb4934f308c878989ff81d4c8_IMG_8477.PNG",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 31,
+    "fields": {
+        "user": "6",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "相比其他公司， 代办费用平均便宜30%",
+        "detail": "media/detail/20250310/a9824dc7f25942ed89a14bbe8e8a3664_아트보드__7.png",
+        "detail_second": "media/detail_second/20250310/2c9b9f21efd548b7b84130c8892a2194_아트보드__7.png",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 32,
+    "fields": {
+        "user": "6",
+        "language": 1,
+        "choice": "外国人犯罪/非法滞留者救济",
+        "work_detail": "谘询并解决 在韩国发生的问题",
+        "detail": "media/detail/20250310/f19bc4001dee4671bdd38dcace6122c9_acs.png",
+        "detail_second": "media/detail_second/20250310/6838a7ef1aa643abab08c2a1224b44ae_acs.png",
+        "order": 2
+    }
+},
+{
+    "model": "work.work",
+    "pk": 33,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 34,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 35,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 36,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 37,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 38,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 39,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 40,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 41,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 42,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 43,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 44,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 45,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 46,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 47,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 48,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 49,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 50,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 51,
+    "fields": {
+        "user": "7",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "외국인 비자서비스",
+        "detail": "상세화면 이미지",
+        "detail_second": "상세화면 이미지",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 52,
+    "fields": {
+        "user": "7",
+        "language": 0,
+        "choice": "맞춤형 비자상담 서비스",
+        "work_detail": "ㅇㅇㅇ",
+        "detail": "media/detail/20250310/d8b618e9b3424e4f9bb98e2190585c09_1번_배너.png",
+        "detail_second": "media/detail_second/20250310/04ffdb963c32481a93bbd2c13b6acdb8_1번_배너.png",
+        "order": 1
+    }
+},
+{
+    "model": "work.work",
+    "pk": 53,
+    "fields": {
+        "user": "2",
+        "language": 1,
+        "choice": "客製化签证谘询服务",
+        "work_detail": "ㅁㄴㅇㅁㄴㅁ",
+        "detail": "media/detail/20250310/d19ee960b09c42849f49ec883aa9fbad_CRM_banner.svg",
+        "detail_second": "media/detail_second/20250310/15a6c7a926f04fe38fba4662afd3e396_footer_insta.png",
+        "order": 2
+    }
+},
+{
+    "model": "work.work",
+    "pk": 54,
+    "fields": {
+        "user": "2",
+        "language": 1,
+        "choice": "外国人犯罪/非法滞留者救济",
+        "work_detail": "ㅁㄴㅇㅁㄴㄴㅁ",
+        "detail": "media/detail/20250310/00770d65fb4e43069613e1d6f06aefaa_CRM_banner.svg",
+        "detail_second": "media/detail_second/20250310/a71c89e64d5e4fd1857551a585743a6a_CRM_icon.svg",
+        "order": 3
+    }
+}
+]
