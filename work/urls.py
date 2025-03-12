@@ -40,4 +40,8 @@ urlpatterns = [
 
 
     path('client/workdetail/', views.work_detail, name='worklist'),  # 의뢰인 업무리스트
+
+
+
+    path('client/work_copy/<int:work_id>', views.work_copy, name='work_copy'),  # 의뢰인 업무리스트
 ]

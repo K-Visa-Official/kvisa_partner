@@ -238,7 +238,7 @@ def visa_intro(request) :
         filters &= Q(created_at__date=create_at)
     
     order_by = request.GET.get("order_by", "-created_at")  # 기본값: id 내림차순
-    valid_order_fields = {"id", "-id", "lang", "-lang", "created_at", "-created_at", "work__choice", "-work__choice"}
+    valid_order_fields = {"id", "-id", "lang", "-lang", "created_at", "-created_at", "process__work__choice", "-process__work__choice"}
     order_by = order_by if order_by in valid_order_fields else "-created_at"
 
     # 데이터 필터링 및 페이징 처리
@@ -551,3 +551,14 @@ def work_detail(request):
     # 직렬화 후 응답 반환
     serializer = ProcessUserSerializer(result_page, many=True)
     return paginator.get_paginated_response(serializer.data)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def work_copy(request , work_id):
+    try:
+        work = Work.objects.get(id=work_id)
+        serializer = WorkSerializer(work)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    except Work.DoesNotExist:
+        return Response({'detail': 'Work not found'}, status=status.HTTP_404_NOT_FOUND)
