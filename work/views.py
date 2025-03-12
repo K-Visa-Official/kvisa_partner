@@ -495,6 +495,7 @@ def me_work(request):
     # 고객명 연락처 접수일자 진행상태 
     state = request.GET.get("state")
     name = request.GET.get("name")
+    choice = request.GET.get("name")
     created_at = request.GET.get("created_at")
     
     filters = Q()
@@ -513,6 +514,13 @@ def me_work(request):
     if created_at:
         filters &= Q(created_at__date=created_at)
     
+    choice_mapping = {
+        "맞춤형 비자상담 서비스": "客製化签证谘询服务",
+        "외국인 범죄/불법체류자 구제": "外国人犯罪/非法滞留者救济",
+    }
+
+    if choice:
+        filters &= Q(process__work__choice=choice) | Q(process__work__choice=choice_mapping.get(choice, ""))
 
     process_users = ProcessUser.objects.select_related("process").filter(process__user=request.user.id).filter(filters)  # ✅ 필터링 추가
     paginator = CustomPagination()
