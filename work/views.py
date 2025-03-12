@@ -223,9 +223,14 @@ def visa_intro(request) :
     if state:
         filters &= Q(state=state)
 
+    choice_mapping = {
+        "맞춤형 비자상담 서비스": "客製化签证谘询服务",
+        "외국인 범죄/불법체류자 구제": "外国人犯罪/非法滞留者救济",
+    }
+
     choice = request.GET.get("choice")
     if choice:
-        filters &= Q(process__work__choice=choice)
+        filters &= Q(process__work__choice=choice) | Q(process__work__choice=choice_mapping.get(choice, ""))
         
     # 생성 날짜 필터 추가
     create_at = request.GET.get("created_at")
