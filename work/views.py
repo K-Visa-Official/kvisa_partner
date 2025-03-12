@@ -182,6 +182,14 @@ def order_change(request):
 def delete_work(request, work_id):
     try:
         work = Work.objects.get(id=work_id)
+        user = User.objects.get(id=work.user)
+        if work.language == 0:
+            user.work_count -= 1 
+            user.save()
+        elif work.language == 1:
+            user.work_count_ch -= 1 
+            user.save()
+
         work.delete()
         return Response({'detail': 'Work deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
     except Work.DoesNotExist:
