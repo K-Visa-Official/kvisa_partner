@@ -1,0 +1,947 @@
+[
+{
+    "model": "work.question",
+    "pk": 1,
+    "fields": {
+        "work": 1,
+        "question": "중국어 단일 업무 등록",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 2,
+    "fields": {
+        "work": 1,
+        "question": "단문형 질문",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 3,
+    "fields": {
+        "work": 1,
+        "question": "장문형 질문",
+        "answer_type": 3
+    }
+},
+{
+    "model": "work.question",
+    "pk": 4,
+    "fields": {
+        "work": 1,
+        "question": "복수형 질문",
+        "answer_type": 1
+    }
+},
+{
+    "model": "work.question",
+    "pk": 10,
+    "fields": {
+        "work": 3,
+        "question": "011",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 11,
+    "fields": {
+        "work": 3,
+        "question": "033",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 12,
+    "fields": {
+        "work": 4,
+        "question": "1. 本人的国籍在哪里？",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 13,
+    "fields": {
+        "work": 4,
+        "question": "2. 现在在韩国持有什么签证？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 14,
+    "fields": {
+        "work": 4,
+        "question": "3. 想要代办什么签证？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 15,
+    "fields": {
+        "work": 4,
+        "question": "4.本人最终学历是什么？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 16,
+    "fields": {
+        "work": 4,
+        "question": "4-1. 现在年龄是多少？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 17,
+    "fields": {
+        "work": 4,
+        "question": "请告诉我您要咨询的手机号码（在国外时请同时填写国家号码）",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 18,
+    "fields": {
+        "work": 5,
+        "question": "本人的国籍在哪里？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 19,
+    "fields": {
+        "work": 5,
+        "question": "现在在韩国持有什么签证？",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 20,
+    "fields": {
+        "work": 5,
+        "question": "想要代办什么签证？",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 21,
+    "fields": {
+        "work": 6,
+        "question": "本人的国籍在哪里？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 22,
+    "fields": {
+        "work": 6,
+        "question": "现在在韩国持有什么签证？",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 23,
+    "fields": {
+        "work": 6,
+        "question": "想要代办什么签证？",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 24,
+    "fields": {
+        "work": 7,
+        "question": "질문1 번",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 25,
+    "fields": {
+        "work": 7,
+        "question": "질문2번",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 26,
+    "fields": {
+        "work": 8,
+        "question": "질문1 번",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 27,
+    "fields": {
+        "work": 8,
+        "question": "질문2번",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 81,
+    "fields": {
+        "work": 15,
+        "question": "단일 수정",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 82,
+    "fields": {
+        "work": 15,
+        "question": "ㅁㄴㅇㅁㄴㅇ",
+        "answer_type": 1
+    }
+},
+{
+    "model": "work.question",
+    "pk": 83,
+    "fields": {
+        "work": 15,
+        "question": "ㅁㄴㅇㅁㄴ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 84,
+    "fields": {
+        "work": 15,
+        "question": "ㅁㄴㄴㅇㅁ  수정",
+        "answer_type": 3
+    }
+},
+{
+    "model": "work.question",
+    "pk": 85,
+    "fields": {
+        "work": 15,
+        "question": "ㅁㄴㅇㅁㄴㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 215,
+    "fields": {
+        "work": 28,
+        "question": "당신의 국적은? ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 216,
+    "fields": {
+        "work": 28,
+        "question": "현재 보유하고 있는 비자는?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 217,
+    "fields": {
+        "work": 28,
+        "question": "변경 및 대행 원하는 비자 및 서비스는?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 218,
+    "fields": {
+        "work": 28,
+        "question": "현재 나이는?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 219,
+    "fields": {
+        "work": 28,
+        "question": "연간 소득금액은?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 220,
+    "fields": {
+        "work": 28,
+        "question": "현재 비자로 한국에 체류한 기간은?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 221,
+    "fields": {
+        "work": 28,
+        "question": "현재 비자 만료일은?",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 222,
+    "fields": {
+        "work": 28,
+        "question": "아래 해당되는 것들을 모두 체크해주세요",
+        "answer_type": 1
+    }
+},
+{
+    "model": "work.question",
+    "pk": 223,
+    "fields": {
+        "work": 28,
+        "question": "이름을 남겨주세요",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 224,
+    "fields": {
+        "work": 28,
+        "question": "연락 받을 전화번호를 남겨주세요",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 225,
+    "fields": {
+        "work": 28,
+        "question": " 연락 가능하신 시간은 언제 이신가요?",
+        "answer_type": 1
+    }
+},
+{
+    "model": "work.question",
+    "pk": 226,
+    "fields": {
+        "work": 29,
+        "question": "현재 어디에 체류하고 있나요",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 227,
+    "fields": {
+        "work": 29,
+        "question": "어떤 종류의 상담을 원하시나요?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 228,
+    "fields": {
+        "work": 29,
+        "question": "현재 사건 후 어떤 진행 상태인가요?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 229,
+    "fields": {
+        "work": 29,
+        "question": "현재 보유하고 있는 한국 비자는?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 230,
+    "fields": {
+        "work": 29,
+        "question": " (만약 불법체류 중이라면) 현재 불법체류한 기간은?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 231,
+    "fields": {
+        "work": 29,
+        "question": "기존에 한국에서 범죄/출입국법 위반한 사실이 있나요?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 232,
+    "fields": {
+        "work": 29,
+        "question": "아래 사항 중 해당되는 사항이 있다면 모두 선택해주세요.",
+        "answer_type": 1
+    }
+},
+{
+    "model": "work.question",
+    "pk": 233,
+    "fields": {
+        "work": 29,
+        "question": "타 본인이 하고 싶은 말씀을 자유롭게 적어주세요.(자세히 적을수록 상담확률 증가)",
+        "answer_type": 3
+    }
+},
+{
+    "model": "work.question",
+    "pk": 234,
+    "fields": {
+        "work": 29,
+        "question": "본인의 국적과 영문 성함은? (예시 : 미국 / GRARE LEE)",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 235,
+    "fields": {
+        "work": 29,
+        "question": "상담 받을 휴대폰번호 ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 236,
+    "fields": {
+        "work": 30,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 1
+    }
+},
+{
+    "model": "work.question",
+    "pk": 237,
+    "fields": {
+        "work": 31,
+        "question": "请问你的国籍是?",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 238,
+    "fields": {
+        "work": 31,
+        "question": "您现在持有的签证?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 239,
+    "fields": {
+        "work": 31,
+        "question": "请选择想要变更或代办的签证服务",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 240,
+    "fields": {
+        "work": 31,
+        "question": "请问您的年龄是?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 241,
+    "fields": {
+        "work": 31,
+        "question": "请问您的年所得金额?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 242,
+    "fields": {
+        "work": 31,
+        "question": "您以目前的签证，在韩国待多长时间了?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 243,
+    "fields": {
+        "work": 31,
+        "question": "目前签证到期日期是?",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 244,
+    "fields": {
+        "work": 31,
+        "question": "以下有符合的状况，请全部勾选",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 245,
+    "fields": {
+        "work": 31,
+        "question": "请留下您的姓名",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 246,
+    "fields": {
+        "work": 31,
+        "question": "请留下您的电话",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 247,
+    "fields": {
+        "work": 31,
+        "question": "方便联繫的时间?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 248,
+    "fields": {
+        "work": 32,
+        "question": "现在滞留在哪里?",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 249,
+    "fields": {
+        "work": 32,
+        "question": "您想咨询什么业务？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 250,
+    "fields": {
+        "work": 32,
+        "question": "现在事件发生后到什么进展？",
+        "answer_type": 1
+    }
+},
+{
+    "model": "work.question",
+    "pk": 251,
+    "fields": {
+        "work": 32,
+        "question": "现在持有什么签证? ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 252,
+    "fields": {
+        "work": 32,
+        "question": "(如果非法滞留中） 非法滞留的时间是多久？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 253,
+    "fields": {
+        "work": 32,
+        "question": "之前在韩国有违反犯罪/出入境法的事实吗？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 254,
+    "fields": {
+        "work": 32,
+        "question": "下列事项中如有相应事项，请全部选择 ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 255,
+    "fields": {
+        "work": 32,
+        "question": "请自由填写其他本人想说的话。（越详细，商谈概率就越高）",
+        "answer_type": 3
+    }
+},
+{
+    "model": "work.question",
+    "pk": 256,
+    "fields": {
+        "work": 32,
+        "question": "本人的国籍和英文姓名是？ (示例:美国/GRARE LEE）",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 257,
+    "fields": {
+        "work": 32,
+        "question": "要咨询的手机号码？",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 258,
+    "fields": {
+        "work": 34,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 259,
+    "fields": {
+        "work": 35,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 260,
+    "fields": {
+        "work": 36,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 261,
+    "fields": {
+        "work": 37,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 262,
+    "fields": {
+        "work": 38,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 263,
+    "fields": {
+        "work": 39,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 264,
+    "fields": {
+        "work": 40,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 265,
+    "fields": {
+        "work": 40,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 266,
+    "fields": {
+        "work": 41,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 267,
+    "fields": {
+        "work": 41,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 268,
+    "fields": {
+        "work": 42,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 269,
+    "fields": {
+        "work": 42,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 270,
+    "fields": {
+        "work": 43,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 271,
+    "fields": {
+        "work": 43,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 272,
+    "fields": {
+        "work": 44,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 273,
+    "fields": {
+        "work": 44,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 274,
+    "fields": {
+        "work": 45,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 275,
+    "fields": {
+        "work": 45,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 276,
+    "fields": {
+        "work": 46,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 277,
+    "fields": {
+        "work": 46,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 278,
+    "fields": {
+        "work": 47,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 279,
+    "fields": {
+        "work": 47,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 280,
+    "fields": {
+        "work": 48,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 281,
+    "fields": {
+        "work": 48,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 282,
+    "fields": {
+        "work": 49,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 283,
+    "fields": {
+        "work": 49,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 284,
+    "fields": {
+        "work": 50,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 285,
+    "fields": {
+        "work": 50,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 286,
+    "fields": {
+        "work": 51,
+        "question": "ㅇㅇㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 287,
+    "fields": {
+        "work": 51,
+        "question": "ㅇㅍㄷㄷ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 288,
+    "fields": {
+        "work": 52,
+        "question": "ㄷㄷㄷ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 289,
+    "fields": {
+        "work": 53,
+        "question": "ㄴㅇㄹㄴㅇㄹ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 290,
+    "fields": {
+        "work": 53,
+        "question": "ㄹㄴㅇㄹ",
+        "answer_type": 2
+    }
+},
+{
+    "model": "work.question",
+    "pk": 291,
+    "fields": {
+        "work": 54,
+        "question": "ㅁㄴㅇㅁㄴㅇㅁㄴㄴㅁㅇ",
+        "answer_type": 0
+    }
+},
+{
+    "model": "work.question",
+    "pk": 292,
+    "fields": {
+        "work": 54,
+        "question": "ㅁㄴㅇㅁㄴㄹ",
+        "answer_type": 2
+    }
+}
+]

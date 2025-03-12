@@ -18,6 +18,9 @@ urlpatterns = [
 
     path('admin/answer/', views.get_answer, name='get_work'),  # ㄴ답변 보기
 
+
+    path('admin/work/delete/<int:work_id>', views.delete_work, name='post_work'),  # 이미지 등록
+    
     ########################### 의뢰인 ###########################
     path('client/works/<str:pk>', views.get_work_bu, name='get_work_list'),  # 업체가 등록한 업무 리스트
 

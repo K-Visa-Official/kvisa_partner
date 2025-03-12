@@ -62,9 +62,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('DB_NAME', 'kvisa_b2b'),
-        'USER': os.getenv('DB_USER', 'root'),
+        'USER': os.getenv('DB_USER', 'admin'),
         'PASSWORD': os.getenv('DB_PW', 'kim12011215'),
-        'HOST': os.getenv('DB_HOST', 'k-visa-partner.cliq0kecaxpp.ap-northeast-2.rds.amazonaws.com'),
+        'HOST': os.getenv('DB_HOST', 'partner-production.cliq0kecaxpp.ap-northeast-2.rds.amazonaws.com'),
         'PORT': '3306',
     }
 }
