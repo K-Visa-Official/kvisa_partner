@@ -495,7 +495,7 @@ def me_work(request):
     # 고객명 연락처 접수일자 진행상태 
     state = request.GET.get("state")
     name = request.GET.get("name")
-    choice = request.GET.get("name")
+    choice = request.GET.get("choice")
     created_at = request.GET.get("created_at")
     
     filters = Q()
