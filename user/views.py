@@ -158,14 +158,18 @@ def get_all_users(request):
     filters = Q()
     business = request.GET.get("business")
     create_at = request.GET.get("create_at")
+    order_by = request.GET.get("order_by", "-id")  # 기본값: id 내림차순
 
     if business:
         filters &= Q(bu_name__icontains=business) | Q(bu_tel_first__icontains=business)  # 필터 수정
 
     if create_at:
         filters &= Q(sign_in__date=create_at)  # 날짜 필터 수정
+    
+    valid_order_fields = {"id", "-id", "sign_in", "-sign_in"}
+    order_by = order_by if order_by in valid_order_fields else "-id"
 
-    total_user = User.objects.filter(filters , is_admin = 0).order_by('-id')
+    total_user = User.objects.filter(filters , is_admin = 0).order_by(order_by)
 
     result_page = paginator.paginate_queryset(total_user, request)
     serializer = UserSerializer(result_page, many=True)
