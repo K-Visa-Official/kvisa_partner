@@ -236,9 +236,13 @@ def visa_intro(request) :
     create_at = request.GET.get("created_at")
     if create_at:
         filters &= Q(created_at__date=create_at)
+    
+    order_by = request.GET.get("order_by", "-created_at")  # 기본값: id 내림차순
+    valid_order_fields = {"id", "-id", "lang", "-lang", "created_at", "-created_at", "work__choice", "-work__choice"}
+    order_by = order_by if order_by in valid_order_fields else "-created_at"
 
     # 데이터 필터링 및 페이징 처리
-    queryset = ProcessUser.objects.filter(filters).order_by('-created_at')
+    queryset = ProcessUser.objects.filter(filters).order_by(order_by)
     result_page = paginator.paginate_queryset(queryset, request)
     serializer = ProcessUserSerializer(result_page, many=True)
 
